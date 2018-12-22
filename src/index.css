@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+.adminPanel {
+  background-color: black;
+  padding: 10px;
+}
+
+.bookView {
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.orderView {
+  border-bottom: 2px solid black;
+  margin: 5px;
+  padding: 5px;
+}
+
+.loginForm {
+  margin-top: 10px;
+}
+
+.goToAdmin {
+  float: right;
+}
