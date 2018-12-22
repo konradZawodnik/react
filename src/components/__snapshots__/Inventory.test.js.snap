@@ -19,11 +19,23 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [],
-      "className": "inventory col-xs-4",
+      "children": <h2>
+        Bookstore inventory:
+</h2>,
+      "className": "inventory col-xs-6",
     },
     "ref": null,
-    "rendered": Array [],
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Bookstore inventory:",
+      },
+      "ref": null,
+      "rendered": "Bookstore inventory:",
+      "type": "h2",
+    },
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -32,11 +44,23 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [],
-        "className": "inventory col-xs-4",
+        "children": <h2>
+          Bookstore inventory:
+</h2>,
+        "className": "inventory col-xs-6",
       },
       "ref": null,
-      "rendered": Array [],
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Bookstore inventory:",
+        },
+        "ref": null,
+        "rendered": "Bookstore inventory:",
+        "type": "h2",
+      },
       "type": "div",
     },
   ],
