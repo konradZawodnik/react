@@ -3,31 +3,9 @@ import './App.css';
 
 
 let counter = 0;
-const NewPrediction = (props) => {
-  return (
-    <div>
-      {/* {props.title} */}
-    </div>
-  )
-}
+
 
 class App extends React.Component {
-  static defaultProps = {
-    predictions: [
-      // {
-      //   id: 0,
-      //   title: "Pierwsza wróżba"
-      // },
-      // {
-      //   id: 1,
-      //   title: "Druga wróżba"
-      // },
-      // {
-      //   id: 2,
-      //   title: "Trzecia wrózba"
-      // }
-    ]
-  }
   state = {
     input: "",
     predictions: [{
@@ -68,11 +46,6 @@ class App extends React.Component {
     };
   }
   render() {
-    const nextpredictions = this.state.predictions.map(prediction => (
-      <NewPrediction key={prediction.id}
-        title={prediction.title}
-      />
-    ))
     return (
       <div>
         <input
@@ -91,9 +64,6 @@ class App extends React.Component {
           value="Dodaj wróżbę"
           onClick={this.handleAddClick}
         />
-        <h1>
-          {nextpredictions}
-        </h1>
         <br />
       </div>
     );
