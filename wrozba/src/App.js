@@ -36,7 +36,7 @@ class App extends React.Component {
 
   handleAddClick = () => {
     for (let i = 0; i < this.state.predictions.length; i++) {
-      var newArray = this.state.predictions.slice();
+      const newArray = this.state.predictions.slice();
       newArray.push({ id: counter++, title: this.state.input });
       if (newArray[newArray.length-1].title === '') {
         return alert("Napisz jakąś wróżbę");
