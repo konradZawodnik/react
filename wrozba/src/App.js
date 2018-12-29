@@ -25,13 +25,11 @@ class App extends React.Component {
     this.setState({ input: e.target.value });
   }
 
-  handleSubmit = (e) => {
-    var randomItem = this.state.predictions[Math.floor(Math.random() * this.state.predictions.length)];
-    var element = document.createElement("div");
-    element.textContent = randomItem.title
-    document.body.appendChild(element);
-    alert(element.textContent)
-    e.preventDefault();
+  handleSubmit = () => {
+    var randomItem = Math.floor(Math.random() * this.state.predictions.length);
+    this.setState({
+      input: this.state.predictions[randomItem]
+    })
   }
 
 
@@ -64,6 +62,7 @@ class App extends React.Component {
           value="Dodaj wróżbę"
           onClick={this.handleAddClick}
         />
+        <h1>{this.state.input.title}</h1>
         <br />
       </div>
     );
