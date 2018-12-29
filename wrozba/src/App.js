@@ -7,7 +7,8 @@ let counter = 0;
 
 class App extends React.Component {
   state = {
-    input: "",
+    input:"",
+    // value:"",
     predictions: [{
       id: counter++,
       title: "Pierwsza wróżba"
@@ -48,7 +49,7 @@ class App extends React.Component {
       <div>
         <input
           type="text"
-          value={this.state.value}
+          // value={this.state.input}
           onChange={this.handleChange}
         />
         <input
