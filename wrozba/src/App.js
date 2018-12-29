@@ -7,7 +7,7 @@ let counter = 0;
 
 class App extends React.Component {
   state = {
-    input:"",
+    input: "",
     // value:"",
     predictions: [{
       id: counter++,
@@ -35,13 +35,15 @@ class App extends React.Component {
 
 
   handleAddClick = () => {
-    var newArray = this.state.predictions.slice();
-    newArray.push({ id: counter++, title: this.state.input });
-    this.setState({ predictions: newArray })
     for (let i = 0; i < this.state.predictions.length; i++) {
-      if (this.state.predictions[i].title === "") {
-        alert("Proszę wpisać życzenie")
-      }
+      var newArray = this.state.predictions.slice();
+      newArray.push({ id: counter++, title: this.state.input });
+      if (newArray[newArray.length-1].title === '') {
+        return alert("Napisz jakąś wróżbę");
+      } else {
+        this.setState({ predictions: newArray })
+        alert(`Wróżba dodana. Aktulane wrózby to :${newArray[i].title}`)
+      };
     };
   }
   render() {
