@@ -8,7 +8,7 @@ let counter = 0;
 class App extends React.Component {
   state = {
     input: "",
-    // value:"",
+   //  value:"",
     predictions: [{
       id: counter++,
       title: "Pierwsza wróżba"
@@ -41,7 +41,9 @@ class App extends React.Component {
       if (newArray[newArray.length-1].title === '') {
         return alert("Napisz jakąś wróżbę");
       } else {
-        this.setState({ predictions: newArray })
+        this.setState({ 
+          predictions: newArray,
+          input:"" })
         alert(`Wróżba dodana. Aktulane wrózby to :${newArray[i].title}`)
       };
     };
@@ -51,7 +53,7 @@ class App extends React.Component {
       <div>
         <input
           type="text"
-          // value={this.state.input}
+       //   value={this.state.input}
           onChange={this.handleChange}
         />
         <input
