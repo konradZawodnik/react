@@ -26,16 +26,18 @@ class List extends Component {
   }
   render() {
     const listItem = this.state.items.map((item) => {
-      return <div key={item.id}>
+      return <li>
+      <div key={item.id}>
         <span>{item.name}</span> <button onClick={this.handleDelete.bind(this, item)}>Usuń członka</button>
       </div>
+      </li>
     })
     return (
       <div>
         <ul>
-          <li>
+         
             {listItem}
-          </li>
+         
         </ul>
       </div>
     );
