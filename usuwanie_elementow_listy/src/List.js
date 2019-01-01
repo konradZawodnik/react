@@ -27,17 +27,15 @@ class List extends Component {
   render() {
     const listItem = this.state.items.map((item) => {
       return <li>
-      <div key={item.id}>
-        <span>{item.name}</span> <button onClick={this.handleDelete.bind(this, item)}>Usuń członka</button>
-      </div>
+        <div key={item.id}>
+          <span>{item.name}</span> <button onClick={this.handleDelete.bind(this, item)}>Usuń członka</button>
+        </div>
       </li>
     })
     return (
       <div>
         <ul>
-         
-            {listItem}
-         
+          {listItem}
         </ul>
       </div>
     );
