@@ -4,10 +4,11 @@ class Draw extends React.Component {
         option: null
     }
     handleShowOption = () => {
+        const { options } = this.state;
         const index = Math.floor(Math.random()
-            * this.state.options.length);
+            * options.length);
         this.setState({
-            option: this.state.options[index]
+            option: options[index]
         })
     }
     handleInputChange = () => {
@@ -16,15 +17,17 @@ class Draw extends React.Component {
         })
     }
     handleAddOption = () => {
-        if (this.state.value = "") return alert("wpisz coś")
-        const options = [...this.state.options]
-        options.push(this.state.value);
+        const { value } = this.state;
+        if (value = "") return alert("wpisz coś")
+        const options = [...options]
+        options.push(value);
         this.setState({
             options: options,
-            value:""
+            value: ""
         })
     }
     render() {
+        const { value, option } = this.state;
         return (
             <div>
                 <button
@@ -32,12 +35,12 @@ class Draw extends React.Component {
                     Zoobacz wróżbę
                <br />
                     <input type="text"
-                        value={this.state.value}
+                        value={value}
                         onChange={this.handleInputChange} />
                     <button onClick={this.handleAddOption}>
                         Dodaj wróżbę
                </button>
-                    {this.state.option ? <h1>{this.state.option}</h1> : null}
+                    {option ? <h1>{option}</h1> : null}
                 </button>
             </div>
         )
