@@ -3,7 +3,7 @@ import './App.css';
 
 
 const Cash = (props) => {
-    const value = (props.cash / props.ratio*props.price).toFixed(2)
+    const value = (props.cash / props.ratio * props.price).toFixed(2)
     return (
         <div>
             {props.title} {props.cash <= 0 ? "" : value}
@@ -16,8 +16,8 @@ class ExchangeCounter extends React.Component {
         amount: "",
         product: "electricity"
     }
-    static defaultProps={
-        currencies:[
+    static defaultProps = {
+        currencies: [
             {
                 id: 0,
                 name: "złotych",
@@ -43,13 +43,13 @@ class ExchangeCounter extends React.Component {
                 title: "Wartość w frankach"
             }
         ],
-        prices:{
-            electricity:.51,
+        prices: {
+            electricity: .51,
             petrol: 4.76,
             oranges: 3.79
         }
     }
- 
+
     handleChange = (e) => {
         this.setState({
             amount: e.target.value
@@ -59,7 +59,7 @@ class ExchangeCounter extends React.Component {
     handleSelect = (e) => {
         this.setState({
             product: e.target.value,
-            amount:""
+            amount: ""
         })
     }
     insertSuffix(select) {
@@ -68,19 +68,20 @@ class ExchangeCounter extends React.Component {
         else if (select === "oranges") return <em>kilogramów</em>
         else return null
     }
-    selectPrice(select){
-        const price=this.props.prices[select]
+    selectPrice(select) {
+        const price = this.props.prices[select]
         return price;
     }
     render() {
         const { amount, product } = this.state;
-        const price=this.selectPrice(product)
-        const calculators = this.props.currencies.map(currency => (
+        const { currencies } = this.props;
+        const price = this.selectPrice(product)
+        const calculators = currencies.map(currency => (
             <Cash key={currency.id}
                 ratio={currency.ratio}
                 title={currency.title}
-                cash={amount} 
-                price={price}/>
+                cash={amount}
+                price={price} />
         ))
         return (
             <div classname="app">
@@ -94,10 +95,10 @@ class ExchangeCounter extends React.Component {
                 <br />
                 <label>
                     <input type="number"
-                        value={this.state.amount}
+                        value={amount}
                         onChange={this.handleChange}
                     />
-                    {this.insertSuffix(this.state.product)}
+                    {this.insertSuffix(product)}
                 </label>
                 {calculators}
             </div>

@@ -3,47 +3,44 @@ import { Link } from 'react-router-dom'
 
 class Header extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-            bookstoreName : "Black Books",
-            clicked : true,
-            textColor : "white",
-            backgroundColor : "black"
-        }
+    state = {
+        bookstoreName: "Black Books",
+        clicked: true,
+        textColor: "white",
+        backgroundColor: "black"
     }
 
     handleClick = () => {
-
-        if(this.state.clicked) {
+        const { clicked } = this.state;
+        if (clicked) {
             this.setState({
-                bookstoreName : "White Books",
-                textColor : "black",
-                backgroundColor : "white"
+                bookstoreName: "White Books",
+                textColor: "black",
+                backgroundColor: "white"
             })
         } else {
             this.setState({
-                bookstoreName : "Black Books",
-                textColor : "white",
-                backgroundColor : "black"
-             
+                bookstoreName: "Black Books",
+                textColor: "white",
+                backgroundColor: "black"
+
             })
         }
         this.setState({
-            clicked : !this.state.clicked
+            clicked: !clicked
         })
     }
 
     render() {
-
+        const { textColor, backgroundColor, bookstoreName } = this.state;
         let headerCss = {
-            color : this.state.textColor,
-            backgroundColor : this.state.backgroundColor
+            color: textColor,
+            backgroundColor,
         }
 
         return (
             <div className="row header" style={headerCss} onClick={this.handleClick}>
-                <center><h1>{this.state.bookstoreName}</h1></center>
+                <center><h1>{bookstoreName}</h1></center>
                 <Link to="/admin"><button className="btn btn-info goToAdmin">Administrator Panel</button></Link>
             </div>
         );

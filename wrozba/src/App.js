@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import './App.css';
 
 
@@ -24,12 +24,12 @@ const App = () => {
     setInput(e.target.value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = useCallback(() => {
     let randomItem = Math.floor(Math.random() * predictions.length);
     setPredictions(predictions[randomItem]);
-  };
+  },[predictions]);
 
-  const handleAddClick = () => {
+  const handleAddClick = useCallback(() => {
     for (let i = 0; i < predictions.length; i++) {
       const newArray = predictions.slice();
       newArray.push({ id: counter++, title: input });
@@ -40,7 +40,7 @@ const App = () => {
         alert(`Wróżba dodana. Aktulane wrózby to :${newArray[i].title}`)
       };
     };
-  };
+  },[predictions]);
 
   return (
     <div>

@@ -18,14 +18,16 @@ class List extends Component {
     }]
   }
   handleDelete(item) {
-    const newState = this.state.items.slice();
+    const { items } = this.state;
+    const newState = items.slice();
     if (newState.indexOf(item) > -1) {
       newState.splice(newState.indexOf(item), 1);
       this.setState({ items: newState })
     }
   }
   render() {
-    const listItem = this.state.items.map((item) => {
+    const { items } = this.state;
+    const listItem = items.map((item) => {
       return <li>
         <div key={item.id}>
           <span>{item.name}</span> <button onClick={this.handleDelete.bind(this, item)}>Usuń członka</button>
