@@ -1,99 +1,86 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
-class Form extends React.Component {
-    state = {
+const form = () => {
+    const [data, handleData] = useState({
         city: "Londyn",
         text: "",
         isLoved: true,
         number: "0"
-    }
-    handleChange = e => {
+    })
+    const handleChange = e => {
         if (e.target.type === "checkbox") {
-            this.setState({
-                [e.target.name]: e.target.checked
-            })
+            handleData({ [e.target.name]: e.target.checked });
         } else {
-            this.setState({
-                [e.target.name]: e.target.value
-            })
+            handleData({ [e.target.name]: e.target.value });
         }
     }
-    // handleCityChange = e => {
-    //     this.setState({
-    //         city: e.target.value
-    //     })
-    // }
-    // handleTextChange = e => {
-    //     this.setState({
-    //         text: e.target.value
-    //     })
-    // }
-    // handleIsLovedChange=e=>{
-    //     this.setState({
-    //         isLoved: e.target.isLoved
-    //     })
-    // }
-    // handleVisitsNumberChange(e){
-    //     this.setState({
-    //         number: e.target.value
-    //     })
-    // }
-    render() {
-        const { city, text, number, isLoved } = this.state;
-        return (
-            // <form>
-            //     <label>
-            //     Podaj imię:
-            //     <input type="text" name="name" />
-            //     </label>
-            //     <br />
-            //     <label>
-            //     Podaj email:
-            //     <input type="email" name="email" />
-            //     </label>
-            //      <br />
-            //     <button>
-            //     Zapisz się
-            //     </button>
-            // </form>
-            <div>
+    return (
+        <>
+            <form>
+                <label>
+                    Podaj imię:
+                    <input
+                        type="text"
+                        name="name"
+                    />
+                </label>
+                <br />
+                <label>
+                    Podaj email:
+                   <input
+                        type="email"
+                        name="email"
+                    />
+                </label>
+                <br />
                 <label>
                     Podaj miasto
-          <input name="city" value={city}
-                        onChange={this.handleChange}
-                        type="text" />
+                    <input
+                        name="city"
+                        value={data.city}
+                        onChange={(e => handleChange(e))}
+                        type="text"
+                    />
                 </label>
                 <br />
                 <label>Napisz coś o tym mieście
-          <textarea name="text" value={text}
-                        onChange={this.handleChange}></textarea>
+                    <textarea
+                        name="text"
+                        value={data.text}
+                        onChange={(e => handleChange(e))}
+                    />
                 </label>
                 <br />
                 <label>
                     Czy lubisz to miasto?
-              <input name="isLoved"
+                    <input
+                        name="isLoved"
                         type="checkbox"
-                        checked={isLoved}
-                        onChange={this.handleChange}
+                        checked={data.isLoved}
+                        onChange={(e => handleChange(e))}
                     />
                 </label>
                 <label>
                     Ile razy byliście w tym mieście?
-              <select name="number"
-                        value={number}
-                        onChange={this.handleChange.bind(this)}>
+                       <select
+                        name="number"
+                        value={data.number}
+                        onChange={(e => handleChange(e))}
+                        >
                         <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="more">więcej</option>
-                    </select>
+                        </select>
                 </label>
-            </div>
-        )
-
-    }
+                <button>
+                    Zapisz się
+                </button>
+            </form>
+        </>
+    )
 }
 
-export default Form;
+export default form;
