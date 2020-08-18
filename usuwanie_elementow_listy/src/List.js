@@ -27,12 +27,12 @@ const List = () => {
   };
 
   const addItem = useCallback((e) => {
+    e.preventDefault();
     const newItem = {
       id: counter++,
       name: e.target[0].value
     };
     handleItems([...items, newItem]);
-    e.preventDefault();
   }, [items]);
 
   const listItem = items.map((item) => {
