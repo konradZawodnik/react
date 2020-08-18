@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 
 let counter = 0
 const List = () => {
@@ -25,7 +25,16 @@ const List = () => {
       handleItems(newState);
     }
   };
-  
+
+  const addItem = useCallback((e) => {
+    const newItem = {
+      id: counter++,
+      name: e.target[0].value
+    };
+    handleItems([...items, newItem]);
+    e.preventDefault();
+  }, [items]);
+
   const listItem = items.map((item) => {
     return <li>
       <div key={item.id}>
@@ -38,6 +47,11 @@ const List = () => {
       <ul>
         {listItem}
       </ul>
+      <form onSubmit={addItem}>
+        <input placeholder="Dodaj członka">
+        </input>
+        <button type="submit">Dodaj</button>
+      </form>
     </div>
   );
 }
