@@ -1,0 +1,75 @@
+.Converter {
+  width: 100%;
+  padding: 0 32%;
+  height: 52.2vh;
+  margin-bottom: -0.2vh;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: white;
+  text-align: center;
+}
+.ConverterTitle {
+  color: blue;
+  font-size: 1rem;
+}
+
+.Form {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.Form input,
+select {
+  padding: 5px;
+  margin: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.Form button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: green;
+  color: white;
+  border: none;
+}
+
+.ConvertButton {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.Converter h3 {
+  background-color: #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 30px;
+}
+
+.Converter h2 span {
+  color: blue;
+}
+
+.HistoryLabel {
+  color: white;
+  cursor: pointer;
+  font-weight: 400;
+  margin-right: 1vw;
+  position: relative;
+  bottom: 18vh;
+  left: 37vw;
+  transform: rotate(90deg);
+}
+
+.Modal {
+  background-color: white;
+  position: absolute;
+  right: 1.5vw;
+  top: 81vh;
+}
