@@ -87,7 +87,7 @@ const CurrencyForm = () => {
                     <span>{"Konweter walut"}</span>
                 </h2>
                 <div className="From">
-                    <div className="Inputs">
+                    <div>
                         <input
                             name="amount"
                             placeholder="Wpisz kwotę"
@@ -95,16 +95,18 @@ const CurrencyForm = () => {
                             value={amount}
                             onKeyPress={(e) => onlyNumberKey(e)}
                             required
+                            style={{ width: '50%' }}
                             onChange={event => setAmmount(event.target.value)}
                         />
                     </div>
-                    <div className="Inputs">
+                    <div>
                         <input
                             name="result"
                             placeholder="Wynik"
                             type="number"
                             value={result}
                             onKeyPress={(e) => onlyNumberKey(e)}
+                            style={{ width: '50%' }}
                             required
                         />
                     </div>
@@ -118,7 +120,7 @@ const CurrencyForm = () => {
                                 <option key={index}>{cur}</option>
                             ))}
                         </select>
-                        <i class="fas fa-exchange-alt"></i>
+                        <i className="fas fa-exchange-alt"></i>
                         <select
                             name="to"
                             onChange={event => selectHandler(event)}

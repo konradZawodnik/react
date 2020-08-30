@@ -30,8 +30,8 @@ const CurrencyHistory = () => {
             setHistoryData(historyResults);
             setLoading(false);
         } catch (error) {
-            console.error(error);
             setErrorModalOpen(true);
+            throw error;
         } finally {
             setLoading(false);
         }

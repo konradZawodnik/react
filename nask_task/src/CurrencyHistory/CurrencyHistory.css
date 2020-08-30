@@ -10,10 +10,36 @@
     white-space: nowrap;
 }
 
+@media (max-width: 360px) {
+  .ClearHistory {
+    transform:translate(-49vw, 40vh);
+   }
+}
+
+@media (min-width: 370px) and (max-width: 375px) {
+  .ClearHistory {
+    transform: translate(-52vw, 43vh);
+   }
+}
+
 .CloseIcon {
     transform: translate(-8vw, -23vh);
     font-weight: 400;
     color: white;
+}
+
+@media (max-width: 360px) {
+    .CloseIcon {
+        transform: translate(-31vw, -37vh);
+        font-weight: 400;
+        color: white;
+    }
+}
+
+@media (min-width: 370px) and (max-width: 375px){
+    .CloseIcon {
+        transform: translate(-29vw, -37vh);
+    }
 }
 
 .HistoryButton {
@@ -44,6 +70,19 @@
     color: white;
 }
 
+@media (max-width: 360px){
+ .HistoryData {
+    margin-bottom: 6vh;
+  }
+}
+
+@media (min-width: 370px) and (max-width: 375px){
+    .HistoryData {
+       margin-bottom: 6vh;
+       margin-left: -14vw;
+     }
+   }
+
 .HistoryData > span {
     background-color: blue;
     padding: 8px 4px;
@@ -52,6 +91,7 @@
 }
 
 .LackOfHistory {
+    color: white;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -63,7 +103,7 @@
 .Loading {
     color: white;
     position: relative;
-    left: 12vw;
+    left: 9vw;
 }
 
 .Modal {
