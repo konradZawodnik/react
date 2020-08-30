@@ -161,9 +161,15 @@ select {
 
 @media (min-width: 1280px){
   .HistoryLabel {
-    bottom: 30.5vh;
+    bottom: 19.5vh;
     left: 36.8vw;
   }
+}
+
+.Loading {
+  color: white;
+  position: relative;
+  left: 6vw;
 }
 
 .Modal {
@@ -171,4 +177,11 @@ select {
   position: absolute;
   right: 1.5vw;
   top: 81vh;
+}
+
+input[type="number"]
+ {
+  width : 100%;
+  border: 1px solid #333;
+  box-sizing: border-box;
 }

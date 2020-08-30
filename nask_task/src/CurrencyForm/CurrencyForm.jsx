@@ -2,22 +2,22 @@ import React, { useState, useCallback, useEffect, Fragment } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, } from 'reactstrap';
-import ContentLoader from 'react-content-loader';
+import { debounce } from "lodash";
 import "./CurrencyForm.css";
 
 const CurrencyForm = () => {
     const [result, setResult] = useState(null);
     const [fromCurrency, setFromCurrency] = useState("USD");
     const [toCurrency, setToCurrency] = useState('GBP');
-    const [amount, setAmmount] = useState(1);
+    const [amount, setAmmount] = useState(null);
     const [currencies, setCurrencies] = useState([]);
     const [loading, setLoading] = useState(false);
     const [errorModalOpen, setErrorModalOpen] = useState(false);
 
-    const onlyNumberKey = useCallback((e) => {
-        const ASCIICode = (e.which) ? e.which : e.keyCode
+    const onlyNumberKey = useCallback(debounce((e) => {
+        const ASCIICode = (e.persist) ? e.persist : e.keyCode
         return (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) ? false : true
-    }, []);
+    }), 1000, []);
 
     const fetchData = useCallback(async () => {
         try {
@@ -78,7 +78,7 @@ const CurrencyForm = () => {
     }, []);
 
     if (loading) {
-        return ContentLoader
+        return <div className="Loading">{"Loading"}</div>
     }
     return (
         <Fragment>
@@ -105,7 +105,7 @@ const CurrencyForm = () => {
                             placeholder="Wynik"
                             type="number"
                             value={result}
-                            onKeyPress={(e) => onlyNumberKey(e)}
+                            onChange={(e) => onlyNumberKey(e)}
                             style={{ width: '50%' }}
                             required
                         />

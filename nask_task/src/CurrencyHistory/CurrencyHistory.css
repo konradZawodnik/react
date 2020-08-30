@@ -215,3 +215,7 @@
    right: 1.5vw;
    top: 81vh;
 }
+
+.ConvertButton {
+   border: solid black 1px;
+}
