@@ -9,9 +9,39 @@
   text-align: center;
 }
 
-@media (min-width: 370px) and (max-width: 375px){
+@media (min-width: 370px) and (max-width: 375px) {
   .Converter {
     margin-left: -14vw;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 330px) {
+  .Converter {
+    margin-left: -5vw;
+  }
+}
+
+@media (min-width: 410px) and (max-width: 414px) {
+  .Converter {
+    transform: translate(-14vw, 1vh);
+  }
+}
+
+@media (min-width: 1023px) and (max-width: 1025px) {
+  .Converter {
+    height: 39vh;
+  }
+} 
+
+@media (min-width: 449px) and (max-width: 451px) {
+  .Converter {
+     margin-left: -7vw;
+  }
+}
+
+@media (min-width: 279px) and (max-width: 281px) {
+  .Converter {
+     margin-left: -4vw;
   }
 }
 
@@ -74,6 +104,12 @@ select {
   transform: rotate(90deg);
 }
 
+@media (min-width: 279px) and (max-width: 281px){
+  .HistoryLabel {
+    transform: translate(-15vw, -20vh);
+  }
+}
+
 @media (max-width: 360px){
   .HistoryLabel {
     bottom: 55vh;
@@ -85,6 +121,48 @@ select {
   .HistoryLabel {
     bottom: 55.5vh;
     left: 63vw;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 769px){
+  .HistoryLabel {
+    bottom: 38vh;
+    left: 46vw;
+  }
+}
+
+@media (min-width: 410px) and (max-width: 414px){
+  .HistoryLabel {
+    left: 59vw;
+    bottom: 47vh;
+  }
+}
+
+@media (min-width: 319px) and (max-width: 321px){
+  .HistoryLabel {
+    left: 79vw;
+    bottom: 55.5vh;
+  }
+}
+
+@media (min-width: 449px) and (max-width: 451px) {
+  .HistoryLabel {
+    left: 59.5vw;
+    bottom: 55vh;
+  }
+}
+
+@media (min-width: 1023px) and (max-width: 1025px) {
+  .HistoryLabel {
+    left: 38.5vw;
+    bottom: 26vh;
+  }
+}
+
+@media (min-width: 1280px){
+  .HistoryLabel {
+    bottom: 30.5vh;
+    left: 36.8vw;
   }
 }
 

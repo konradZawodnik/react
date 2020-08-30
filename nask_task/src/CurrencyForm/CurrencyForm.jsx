@@ -84,7 +84,7 @@ const CurrencyForm = () => {
         <Fragment>
             <div className="Converter">
                 <h2>
-                    <span>{"Konweter walut"}</span>
+                    <span>{"Konwerter walut"}</span>
                 </h2>
                 <div className="From">
                     <div>

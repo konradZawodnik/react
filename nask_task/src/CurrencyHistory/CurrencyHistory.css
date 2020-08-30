@@ -18,9 +18,40 @@
 
 @media (min-width: 370px) and (max-width: 375px) {
   .ClearHistory {
-    transform: translate(-52vw, 43vh);
+    transform: translate(-46vw, 39vh);
    }
 }
+
+@media (min-width: 320px) and (max-width: 330px) {
+  .ClearHistory {
+    transform: translate(-56vw, 46vh);
+   }
+}
+
+@media (min-width: 767px) and (max-width: 769px) {
+    .ClearHistory {
+        transform: translate(-23vw,28vh);
+    }
+}
+
+@media (min-width: 410px) and (max-width: 414px) {
+    .ClearHistory {
+        transform: translate(-42vw,38vh);
+    }
+}
+
+@media (min-width: 1023px) and (max-width: 1025px) {
+    .ClearHistory{
+        transform: translate(-17vw, 21vh);
+    }
+}
+
+@media (min-width: 449px) and (max-width: 451px) {
+    .ClearHistory {
+        transform: translate(-39vw, 46vh);
+    }
+}
+
 
 .CloseIcon {
     transform: translate(-8vw, -23vh);
@@ -39,6 +70,48 @@
 @media (min-width: 370px) and (max-width: 375px){
     .CloseIcon {
         transform: translate(-29vw, -37vh);
+    }
+}
+
+@media (min-width: 320px) and (max-width: 330px){
+    .CloseIcon {
+        transform: translate(-35vw, -37vh);
+    }
+}
+
+@media (min-width: 767px) and (max-width: 769px){
+    .CloseIcon {
+        transform: translate(-14vw, -23vh);
+    }
+}
+
+@media (min-width: 410px) and (max-width: 414px){
+    .CloseIcon {
+        transform: translate(-26vw, -28vh);
+    }
+}
+
+@media (min-width: 1023px) and (max-width: 1025px){
+    .CloseIcon {
+        transform: translate(-10vw, -18vh);
+    }
+}
+
+@media (min-width: 449px) and (max-width: 451px) {
+    .CloseIcon {
+        transform: translate(-24.5vw, -39vh);
+    }
+}
+
+@media (min-width: 449px) and (max-width: 451px) {
+    .CloseIcon {
+        transform: translate(-10vw, -18vh);
+    }
+}
+
+@media (min-width: 279px) and (max-width: 281px) {
+    .CloseIcon {
+        transform: translate(-86vw, -46vh);
     }
 }
 
@@ -76,12 +149,36 @@
   }
 }
 
-@media (min-width: 370px) and (max-width: 375px){
+@media (min-width: 370px) and (max-width: 375px) {
     .HistoryData {
        margin-bottom: 6vh;
        margin-left: -14vw;
      }
    }
+
+@media (min-width: 320px) and (max-width: 330px) {
+    .HistoryData {
+      margin-left: -8vw;
+    }
+}
+
+@media (min-width: 410px) and (max-width: 414px) {
+    .HistoryData {
+      margin-left: -13vw;
+    }
+}
+
+@media (min-width: 449px) and (max-width: 451px) {
+   .HistoryData {
+      margin-left: -7vw;
+   }
+}
+
+@media (min-width: 279px) and (max-width: 281px) {
+    .HistoryData {
+       margin-left: -4vw;
+    }
+ }
 
 .HistoryData > span {
     background-color: blue;
@@ -98,6 +195,12 @@
     margin-left: 6vh;
     height: 100%;
     width: 100%;
+}
+
+@media (min-width: 1023px) and (max-width:1025px){
+   .LackOfHistory {
+        margin-left: 2vh;
+   }
 }
 
 .Loading {
