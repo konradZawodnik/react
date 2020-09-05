@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
@@ -9,7 +9,7 @@ import './ModalContainer.css';
 const ModalContainer = ({
     getRandomPhoto, modalOpen, clickedPhoto, photos, randomPhoto,
     resetClickedPhoto, resetRandomPhoto, setModalOpen, }) => (
-        <div >
+        <Fragment>
             <Modal
                 className="Modal"
                 isOpen={modalOpen}
@@ -52,7 +52,7 @@ const ModalContainer = ({
                     </Button>
                 </ModalFooter>
             </Modal>
-        </div>
+        </Fragment>
     );
 
 const mapStateToProps = (state) => ({
