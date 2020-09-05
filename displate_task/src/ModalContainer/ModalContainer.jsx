@@ -39,7 +39,7 @@ const ModalContainer = ({
                         }}
                     >
                         Losuj nastepne zdjęcie
-                </Button>
+                   </Button>
                     <Button
                         className="Button"
                         color="secondary"
@@ -49,7 +49,7 @@ const ModalContainer = ({
                         }}
                     >
                         Zamknij
-                </Button>
+                    </Button>
                 </ModalFooter>
             </Modal>
         </div>
