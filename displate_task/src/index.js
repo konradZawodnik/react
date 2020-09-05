@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import ButtonsContainer from './ButtonsContainer';
+import store from './store/store'
+import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <ButtonsContainer />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
