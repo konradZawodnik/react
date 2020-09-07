@@ -10,45 +10,44 @@ const ModalContainer = ({
     getRandomPhoto, modalOpen, clickedPhoto, photos, randomPhoto, loading,
     resetClickedPhoto, resetRandomPhoto, setModalOpen, }) => (
         <Fragment>
-            {loading ? <div className="Loading"><Spinner animation="grow" size="sm" /></div> :
-                <Modal
-                    className="Modal"
-                    isOpen={modalOpen}
-                >
-                    <ModalHeader className="ModalHeader">
-                        Zdjęcie psa
+            <Modal
+                className="Modal"
+                isOpen={modalOpen}
+            >
+                <ModalHeader className="ModalHeader">
+                    Zdjęcie psa
                 </ModalHeader>
-                    <ModalBody className="ModalBody">
-                        {modalOpen &&
-                            <img
-                                alt={photos ? clickedPhoto : randomPhoto}
-                                src={photos ? clickedPhoto : randomPhoto}
-                            />}
-                    </ModalBody>
-                    <ModalFooter className="ModalFooter">
-                        <Button
-                            className="Button"
-                            color="primary"
-                            onClick={() => {
-                                clickedPhoto && resetClickedPhoto();
-                                getRandomPhoto();
-                            }}
-                        >
-                            Losuj nastepne zdjęcie
+                <ModalBody className="ModalBody">
+                    {loading && modalOpen ? <div className="Loading"><Spinner animation="grow" size="sm" /></div> :
+                        <img
+                            alt={(photos && clickedPhoto) || randomPhoto}
+                            src={(photos && clickedPhoto) || randomPhoto}
+                        />}
+                </ModalBody>
+                <ModalFooter className="ModalFooter">
+                    <Button
+                        className="Button"
+                        color="primary"
+                        onClick={() => {
+                            clickedPhoto && resetClickedPhoto();
+                            getRandomPhoto();
+                        }}
+                    >
+                        Losuj nastepne zdjęcie
                    </Button>
-                        <Button
-                            className="Button"
-                            color="secondary"
-                            onClick={() => {
-                                randomPhoto && resetRandomPhoto();
-                                clickedPhoto && resetClickedPhoto();
-                                setModalOpen(false);
-                            }}
-                        >
-                            Zamknij
+                    <Button
+                        className="Button"
+                        color="secondary"
+                        onClick={() => {
+                            randomPhoto && resetRandomPhoto();
+                            clickedPhoto && resetClickedPhoto();
+                            setModalOpen(false);
+                        }}
+                    >
+                        Zamknij
                     </Button>
-                    </ModalFooter>
-                </Modal>}
+                </ModalFooter>
+            </Modal>
         </Fragment>
     );
 
