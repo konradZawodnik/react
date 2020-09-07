@@ -60,7 +60,7 @@ export const resetClickedPhoto = () => async dispatch => {
     try {
         dispatch({
             type: RESET_CLICKED_PHOTO,
-            payload: [],
+            payload: null,
         })
     }
     catch (err) {
@@ -75,7 +75,7 @@ export const resetRandomPhoto = () => async dispatch => {
     try {
         dispatch({
             type: RESET_RANDOM_PHOTO,
-            payload: [],
+            payload: null,
         })
     }
     catch (err) {
