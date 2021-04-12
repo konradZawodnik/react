@@ -1,0 +1,44 @@
+$defaultTextAlign: center;
+$defaultDisplay: flex;
+$defaultFlexDirection: column;
+$defaultJustifyContent: center;
+$defaultAlignItems: center;
+
+.videoDescription {
+    text-align: $defaultTextAlign;
+}
+
+.videoDetails {
+    align-items: $defaultAlignItems;
+    display: $defaultDisplay;
+    flex-direction: $defaultFlexDirection;
+    justify-content: $defaultJustifyContent;
+}
+
+.videoPlayer {
+    align-items: $defaultAlignItems;
+    display: $defaultDisplay;
+    flex-direction: $defaultFlexDirection;
+    justify-content: $defaultJustifyContent;
+    overflow: hidden;
+    position: relative;
+    width:100%;
+}
+
+.videoPlayer::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+.videoPlayer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.videoTitle {
+    text-align: $defaultTextAlign;
+}

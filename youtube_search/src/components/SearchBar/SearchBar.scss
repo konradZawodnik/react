@@ -1,0 +1,30 @@
+
+.input {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 0.5vh;
+}
+
+.inputField {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.label {
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.searchBarContainer {
+    align-items: center;
+    border: 1px solid black;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-height: 250px;
+    max-width: 400px;
+    width: 100%
+}
