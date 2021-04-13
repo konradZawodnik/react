@@ -24,15 +24,17 @@ const SearchBar = ({ handleFormSubmit }: SearchBarProps) => {
             <form className='form' onSubmit={handleSubmit} >
                 <div className='inputField'>
                     <label className="label" htmlFor="video-search">Video Search</label>
-                    <input
-                        className='input'
-                        name='video-search'
-                        onChange={handleChange}
-                        placeholder="Search"
-                        type="text"
-                        value={term}
-                    />
-                    <i className="fa fa-search"/>
+                    <div className="submitContainer">
+                        <input
+                            className='input'
+                            name='video-search'
+                            onChange={handleChange}
+                            placeholder="Search"
+                            type="text"
+                            value={term}
+                        />
+                        <button className="button" type="submit">Search</button>
+                    </div>
                 </div>
             </form>
         </div>
