@@ -1,4 +1,9 @@
 
+.form {
+    max-width: 403px;
+    width: 100%;
+}
+
 .input {
     cursor: pointer;
     font-weight: bold;
@@ -19,8 +24,6 @@
 
 .searchBarContainer {
     align-items: center;
-    border: 1px solid black;
-    background-color: aliceblue;
     display: flex;
     justify-content: center;
     flex-direction: column;

@@ -21,7 +21,7 @@ const SearchBar = ({ handleFormSubmit }: SearchBarProps) => {
 
     return (
         <div className='searchBarContainer'>
-            <form onSubmit={handleSubmit} >
+            <form className='form' onSubmit={handleSubmit} >
                 <div className='inputField'>
                     <label className="label" htmlFor="video-search">Video Search</label>
                     <input
@@ -32,6 +32,7 @@ const SearchBar = ({ handleFormSubmit }: SearchBarProps) => {
                         type="text"
                         value={term}
                     />
+                    <i className="fa fa-search"/>
                 </div>
             </form>
         </div>
