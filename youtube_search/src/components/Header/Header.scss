@@ -3,3 +3,39 @@
     justify-content: center;
     width: 100%;
 }
+
+.logo {
+    height: 100%;
+    margin: -17vh 0.5vw;
+    max-height: 300px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Impact, "Arial Black";
+    line-height: 302px;
+}
+
+.red-color {
+    color: red;
+}
+
+.you {
+    text-shadow: 0.02em 0.02em 0.06em rgba(0, 0, 0, 0.4);
+}
+
+.youtubeIcon {
+    display: flex;
+    font-size: 3.5rem;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: -6vw;
+}
+
+@media (max-width: 768px) {
+    .youtubeIcon {
+        display: flex;
+        font-size: 3.5rem;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 0vw;
+    }
+}
