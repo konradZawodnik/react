@@ -25,11 +25,9 @@ const VideoDetail = ({ video }: VideoDetailProps) => {
                 <>
                     <div className="videoPlayer">
                         <iframe
-                            height="460"
                             src={videoSrc}
                             allowFullScreen
                             title='Video player'
-                            width="700"
                         />
                     </div>
                     <div className="videoDetails">

@@ -1,7 +1,14 @@
 .button {
     cursor: pointer;
+    font-size: 1.2rem;
     height: 100%;
-    margin-left: 2px;
+    margin-left: -1px;
+    max-width: 91px;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: aquamarine;
 }
 
 .form {
@@ -12,7 +19,14 @@
 .input {
     cursor: pointer;
     font-weight: bold;
+    font-size: 1.2rem;
     margin-bottom: 0.5vh;
+    max-width: 262px;
+    width: 100%;
+}
+
+.input:hover {
+    background-color: aliceblue;
 }
 
 .inputField {
@@ -23,6 +37,7 @@
 
 .label {
     display: flex;
+    font-size: 1.2rem;
     font-weight: bold;
     justify-content: center;
     padding-right: 3vw;
@@ -41,6 +56,6 @@
 .submitContainer {
     display: flex;
     flex-direction: row;
-    padding-left: 5vw;
+    padding-left: 1vw;
     padding-top: 0.5vh;
 }

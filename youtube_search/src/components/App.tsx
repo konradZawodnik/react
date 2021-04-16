@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import { Switch, Route, useHistory } from "react-router-dom";
 
+import Header from './Header/Header';
 import PlayingView from './PlayingView/PlayingView';
-import SearchBar from './SearchBar/Searchbar';
 import SearchView from './SearchView/SearchView';
 import youtube from '../api/youtube';
 
@@ -30,23 +30,30 @@ const App = () => {
     }, [history]);
 
     return (
-        <div className='container'>
-            <header className='header'>
-                <SearchBar handleFormSubmit={handleSubmit} />
-            </header>
-            <Switch>
-                <Route
-                    path="/player"
-                >
-                    <PlayingView handleVideoSelect={handleVideoSelect} videos={videos} video={selectedVideo} />
-                </Route>
-                <Route
-                    path="/search"
-                >
-                    <SearchView handleVideoSelect={handleVideoSelect} videos={videos} />
-                </Route>
-            </Switch>
-        </div>
+        <>
+            <Header handleFormSubmit={handleSubmit} />
+            <div className='container'>
+                <Switch>
+                    <Route
+                        path="/player"
+                    >
+                        <PlayingView
+                            handleVideoSelect={handleVideoSelect}
+                            videos={videos}
+                            video={selectedVideo}
+                        />
+                    </Route>
+                    <Route
+                        path="/search"
+                    >
+                        <SearchView
+                            handleVideoSelect={handleVideoSelect}
+                            videos={videos}
+                        />
+                    </Route>
+                </Switch>
+            </div>
+        </>
     )
 }
 
