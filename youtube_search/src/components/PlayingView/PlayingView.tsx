@@ -34,10 +34,10 @@ type PlayingViewProps = {
 
 const PlayingView = ({ handleVideoSelect, videos, video }: PlayingViewProps) => (
     <>
-        <div className="column">
+        <div className="firstColumn">
             <VideoDetail video={video} />
         </div>
-        <div className="column">
+        <div className="secondColumn">
             <VideoList handleVideoSelect={handleVideoSelect} videos={videos} />
         </div>
     </>
