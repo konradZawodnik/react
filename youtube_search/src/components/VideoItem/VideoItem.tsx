@@ -17,17 +17,21 @@ type VideoItemProps = {
     }
 }
 
-const VideoItem = ({ video, handleVideoSelect }: VideoItemProps) => (
-    <div onClick={() => handleVideoSelect(video)} className='video-item item'>
-        <img
-            alt={video.snippet.description}
-            className='image'
-            src={video.snippet.thumbnails.medium.url}
-        />
-        <div className='content'>
-            <div className='title'>{video.snippet.title}</div>
+const VideoItem = ({ video, handleVideoSelect }: VideoItemProps) => {
+    const { snippet } = video;
+    const { description, thumbnails, title } = snippet;
+    return (
+        <div onClick={() => handleVideoSelect(video)} className='video-item item'>
+            <img
+                alt={description}
+                className='image'
+                src={thumbnails.medium.url}
+            />
+            <div className='content'>
+                <div className='title'>{title}</div>
+            </div>
         </div>
-    </div>
-);
+    );
+}
 
 export default VideoItem;

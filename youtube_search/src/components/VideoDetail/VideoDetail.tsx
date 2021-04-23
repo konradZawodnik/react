@@ -16,7 +16,8 @@ type VideoDetailProps = {
 }
 
 const VideoDetail = ({ video }: VideoDetailProps) => {
-    let videoSrc
+
+    let videoSrc;
     if (video) {
         const { id } = video;
         const { channelId, videoId } = id;
