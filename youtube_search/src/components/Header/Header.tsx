@@ -13,10 +13,10 @@ const useMedia = (query: string) => {
     useEffect(() => {
         const media = window.matchMedia(query);
         if (media.matches !== matches) {
-          setMatches(media.matches);
+            setMatches(media.matches);
         }
         const listener = () => {
-          setMatches(media.matches);
+            setMatches(media.matches);
         };
         media.addListener(listener);
         return () => media.removeListener(listener);
@@ -36,7 +36,9 @@ const Header = ({ handleFormSubmit }: HeaderProps) => {
                         <span className="you">YouTube</span>
                     </div>}
             </div>
-            <SearchBar handleFormSubmit={handleFormSubmit}/>
+            <SearchBar
+                handleFormSubmit={handleFormSubmit}
+            />
         </header>
     );
 }

@@ -4,7 +4,6 @@ import './SearchBar.scss';
 
 type SearchBarProps = {
     handleFormSubmit: (term?: string) => void,
-    term?: string,
 }
 
 const SearchBar = ({ handleFormSubmit }: SearchBarProps) => {

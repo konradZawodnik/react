@@ -8,7 +8,22 @@
 }
 
 .button:hover {
-    background-color: #00B2EE;
+    background-color: #00b2ee;
+}
+
+.dropdown {
+    width: 100%;
+}
+
+.dropdownItem {
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+.dropdownItem:hover {
+    background-color: aliceblue;
 }
 
 .form {
