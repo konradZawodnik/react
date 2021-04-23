@@ -17,6 +17,7 @@ type SearchViewProps = {
             }
         },
         id: {
+            channelId: string,
             videoId: string,
         }
     }>,

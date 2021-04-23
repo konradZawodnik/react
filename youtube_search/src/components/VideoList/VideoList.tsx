@@ -16,6 +16,7 @@ type VideoListProps = {
             }
         },
         id: {
+            channelId: string,
             videoId: string,
         }
     }>,
@@ -23,7 +24,10 @@ type VideoListProps = {
 
 const VideoList = ({ videos, handleVideoSelect }: VideoListProps) => {
     const renderedVideos = videos.map((video) => {
-        return <VideoItem key={video.id.videoId} video={video} handleVideoSelect={handleVideoSelect} />
+        return <VideoItem key={video.id.channelId ? `https://www.youtube.com/embed/${video.id.channelId}`
+            : `https://www.youtube.com/embed/${video.id.videoId}`}
+            video={video}
+            handleVideoSelect={handleVideoSelect} />
     });
 
     return <div className="renderedVideos">{renderedVideos}</div>;

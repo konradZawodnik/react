@@ -36,7 +36,7 @@ const Header = ({ handleFormSubmit }: HeaderProps) => {
                         <span className="you">YouTube</span>
                     </div>}
             </div>
-            <SearchBar handleFormSubmit={handleFormSubmit} />
+            <SearchBar handleFormSubmit={handleFormSubmit}/>
         </header>
     );
 }

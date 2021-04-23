@@ -13,6 +13,7 @@ type PlayingViewProps = {
             title: string,
         },
         id: {
+            channelId: string,
             videoId: string,
         }
     } | null,
@@ -27,6 +28,7 @@ type PlayingViewProps = {
             }
         },
         id: {
+            channelId: string,
             videoId: string,
         }
     }>,

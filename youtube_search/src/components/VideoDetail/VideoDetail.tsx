@@ -9,6 +9,7 @@ type VideoDetailProps = {
             title: string,
         },
         id: {
+            channelId: string,
             videoId: string,
         }
     } | null,
@@ -17,7 +18,9 @@ type VideoDetailProps = {
 const VideoDetail = ({ video }: VideoDetailProps) => {
     let videoSrc
     if (video) {
-        videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
+        const { id } = video;
+        const { channelId, videoId } = id;
+        videoSrc = channelId ? `https://www.youtube.com/embed/${channelId}` : `https://www.youtube.com/embed/${videoId}`;
     }
     return (
         <>

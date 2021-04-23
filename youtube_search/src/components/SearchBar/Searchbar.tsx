@@ -33,7 +33,7 @@ const SearchBar = ({ handleFormSubmit }: SearchBarProps) => {
                             type="text"
                             value={term}
                         />
-                        <button className="button" type="submit"><i className="fa fa-search"/></button>
+                        <button className="button" type="submit"><i className="fa fa-search" /></button>
                     </div>
                 </div>
             </form>
