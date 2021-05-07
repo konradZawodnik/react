@@ -1,16 +1,23 @@
 import React, { useState, useCallback } from 'react';
 
+import Form from './Form/Form';
+
+import './List.css';
+
+type ItemInterface = {
+  id: number,
+  name: string
+}
+
 let counter = 0
 const List = () => {
-
   const [items, handleItems] = useState([{
     id: counter++,
     name: "Jan K"
   }, {
     id: counter++,
     name: "Tomasz S"
-  },
-  {
+  }, {
     id: counter++,
     name: "Mateusz B"
   }, {
@@ -18,7 +25,9 @@ const List = () => {
     name: "Przemysław R"
   }]);
 
-  const handleDelete = (e, item) => {
+  const [value, setValue] = useState("");
+
+  const handleDelete = (e: any, item: ItemInterface) => {
     const newState = items.slice();
     if (newState.indexOf(item) > -1) {
       newState.splice(newState.indexOf(item), 1);
@@ -33,25 +42,22 @@ const List = () => {
       name: e.target[0].value
     };
     handleItems([...items, newItem]);
+    setValue("");
   }, [items]);
 
-  const listItem = items.map((item) => {
-    return <li>
+  const listItem = items.map((item) => (
+    <li>
       <div key={item.id}>
-        <span>{item.name}</span> <button onClick={(e) => handleDelete(e, item)}>Usuń członka</button>
+        <span>{item.name}</span> <button className="Button" onClick={(e) => handleDelete(e, item)}>Usuń członka</button>
       </div>
     </li>
-  })
+  ))
   return (
-    <div>
+    <div className="Container">
       <ul>
         {listItem}
       </ul>
-      <form onSubmit={addItem}>
-        <input placeholder="Dodaj członka">
-        </input>
-        <button type="submit">Dodaj</button>
-      </form>
+      <Form addItem={addItem} setValue={setValue} value={value}/>
     </div>
   );
 }

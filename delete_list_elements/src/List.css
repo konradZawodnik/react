@@ -1,0 +1,14 @@
+.Button {
+    cursor: pointer;
+}
+
+.Button:hover {
+    font-weight: bold;
+}
+
+.Container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
