@@ -10,10 +10,10 @@ import youtube from '../api/youtube';
 import './App.scss';
 
 const App = () => {
-    const [videos, setVideos] = useState([])
-    const [selectedVideo, setSelectedVideo] = useState(null);
-    const [erroModalOpen, setErrorrModalOpen] = useState(false);
-    const [loading, setLoading] = useState(false);
+    const [videos, setVideos] = useState<Array<{ snippet: { description?: string | undefined; title?: string | undefined; thumbnails: { medium: { url?: string | undefined; }; }; }; id: { channelId: string; videoId: string; }; }>>([])
+    const [selectedVideo, setSelectedVideo] = useState<{ snippet: { description: string; title: string; }; id: { channelId: string; videoId: string; }; } | null | undefined>(null);
+    const [erroModalOpen, setErrorrModalOpen] = useState<boolean>(false);
+    const [loading, setLoading] = useState<boolean>(false);
     const history = useHistory();
 
     const handleSubmit = useCallback(async (termFromSearchBar) => {
