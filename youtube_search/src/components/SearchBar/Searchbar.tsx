@@ -9,7 +9,7 @@ type SearchBarProps = {
 const SearchBar = ({ handleFormSubmit }: SearchBarProps) => {
     const [term, setTerm] = useState<string>('');
 
-    const handleChange = useCallback((event:any) => {
+    const handleChange = useCallback((event:React.ChangeEvent<HTMLInputElement>) => {
         setTerm(event.target.value);
     }, []);
 

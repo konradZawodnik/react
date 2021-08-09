@@ -14,19 +14,19 @@ type ExchangeCounterProps = {
         title: string
     }>,
     prices: {
-        [select:string]: number,
+        [select: string]: number,
     },
 }
 
 const ExchangeCounter = ({ currencies, prices }: ExchangeCounterProps) => {
-    const [amount, setAmount] = useState("");
-    const [product, setProduct] = useState("electricity")
+    const [amount, setAmount] = useState<string>("");
+    const [product, setProduct] = useState<string>("electricity")
 
-    const handleChange = useCallback((e) => {
+    const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
         setAmount(e.target.value);
     }, []);
 
-    const handleSelect = useCallback((e) => {
+    const handleSelect = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
         setProduct(e.target.value);
         setAmount("");
     }, []);
