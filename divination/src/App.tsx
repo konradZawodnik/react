@@ -21,7 +21,7 @@ const App = () => {
     id: counter++,
     title: "Trzecia wrózba"
   }]
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState<string>('');
   const [predictions, setPredictions] = useState<any>(initialValues);
 
   const handleSubmit = useCallback(() => {
