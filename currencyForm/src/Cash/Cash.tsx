@@ -1,4 +1,3 @@
-import React from 'react';
 
 type CashProps = {
     cash: string,

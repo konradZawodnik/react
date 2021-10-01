@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import Cash from './Cash/Cash';
 import Select from './Select/Select';
@@ -47,7 +47,7 @@ const ExchangeCounter = ({ currencies, prices }: ExchangeCounterProps) => {
     const selectPrice = useCallback((select) => {
         const price = prices[select]
         return price;
-    }, []);
+    }, [prices]);
 
     const price = selectPrice(product)
     return (

@@ -1,9 +1,7 @@
-import React from 'react';
-
 import './Select.css';
 
-type SelectProps ={
-    handleSelect: (e:any)=>void,
+type SelectProps = {
+    handleSelect: (e: any) => void,
     product?: string
 }
 
