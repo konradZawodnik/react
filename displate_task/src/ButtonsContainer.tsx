@@ -16,7 +16,7 @@ type TReduxState = {
 
 type TReduxActions = {
   getAllPhotos: () => void,
-  getImageOfClickedBreed: (e: any, key: string) => void,
+  getImageOfClickedBreed: (e: React.MouseEvent, key: string) => void,
 }
 
 type TButtonsContainer = TReduxActions & TReduxState
