@@ -13,7 +13,7 @@ interface DataInterface {
     [key: string]: string|boolean,
 }
 
-const form = () => {
+const Form = () => {
     const [data, handleData] = useState<DataInterface>({
         city: "",
         text: "",
@@ -52,4 +52,4 @@ const form = () => {
     )
 }
 
-export default form;
+export default Form;
