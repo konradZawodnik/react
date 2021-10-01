@@ -10,8 +10,7 @@ const initialState = {
     loading: true
 }
 
-export default function (state = initialState, action) {
-
+const photosReducer = (state = initialState, action) => {
     switch (action.type) {
         case GET_ALL_PHOTOS:
             return {
@@ -45,5 +44,6 @@ export default function (state = initialState, action) {
             };
         default: return state
     }
-
 }
+
+export default photosReducer;
