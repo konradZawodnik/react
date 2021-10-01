@@ -36,7 +36,9 @@ const ModalContainer = ({
             open={modalOpen}
         >
             <ModalHeader className="ModalHeader">
-                Zdjęcie psa
+                {`Zdjęcie psa: ${(!clickedPhoto && !randomPhoto) ? '' :
+                    (clickedPhoto && clickedPhoto.substring(30).split('/')[0])
+                    || (randomPhoto && randomPhoto.substring(30).split('/')[0])}`}
             </ModalHeader>
             <ModalContent className="ModalBody">
                 {loading && modalOpen ? <div className="Loading"><Loader animation="grow" size="small" /></div> :
@@ -54,7 +56,7 @@ const ModalContainer = ({
                         getRandomPhoto();
                     }}
                 >
-                    Losuj nastepne zdjęcie
+                    {'Losuj nastepne zdjęcie'}
                 </Button>
                 <Button
                     className="Button"
@@ -65,7 +67,7 @@ const ModalContainer = ({
                         setModalOpen(false);
                     }}
                 >
-                    Zamknij
+                    {'Zamknij'}
                 </Button>
             </ModalActions>
         </Modal>
