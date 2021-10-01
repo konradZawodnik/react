@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import moment from 'moment';
 
 import './CurrencyHistory.css';
@@ -25,7 +25,7 @@ const CurrencyHistory = () => {
             const toCurrency = localStorage.getItem('toCurrency');
             const actualDate = moment().format('YYYY-MM-DD');
             const oldestPossibleDate = moment().subtract(7, 'days').format('YYYY-MM-DD');
-            const response = await axios.get(`https://free.currconv.com/api/v7/convert?q=${fromCurrency}_${toCurrency}&compact=ultra&date=${oldestPossibleDate}&endDate=${actualDate}&apiKey=3b385138a6bddd2a8b03`)
+            const response: AxiosResponse = await axios.get(`https://free.currconv.com/api/v7/convert?q=${fromCurrency}_${toCurrency}&compact=ultra&date=${oldestPossibleDate}&endDate=${actualDate}&apiKey=3b385138a6bddd2a8b03`)
             let id = 0;
             const historyResults = Object.entries(response.data[`${fromCurrency}_${toCurrency}`]).map(([key, value], index) => ({
                 date: key,

@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect, Fragment } from "react";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { Link } from 'react-router-dom';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, } from 'reactstrap';
 import { debounce } from "lodash";
@@ -22,7 +22,7 @@ const CurrencyForm = () => {
     const fetchData = useCallback(async () => {
         try {
             setLoading(true);
-            const response = await axios.get("https://free.currconv.com/api/v7/currencies?apiKey=6cf3a122f68b6389d5fa")
+            const response: AxiosResponse = await axios.get("https://free.currconv.com/api/v7/currencies?apiKey=6cf3a122f68b6389d5fa")
             const currencyAr = ["EUR"];
             for (const key in response.data.results) {
                 currencyAr.push(key);
