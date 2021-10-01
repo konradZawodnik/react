@@ -45,7 +45,7 @@ const CurrencyForm = () => {
         try {
             if (fromCurrency !== toCurrency) {
                 setLoading(true);
-                const response = await axios
+                const response: AxiosResponse = await axios
                     .get(`https://free.currconv.com/api/v7/convert?q=${fromCurrency}_${toCurrency}&compact=ultra&apiKey=3b385138a6bddd2a8b03`)
                 setResult(response.data[`${fromCurrency}_${toCurrency}`]);
                 const resultFixed = Number(amount) * response.data[`${fromCurrency}_${toCurrency}`];
