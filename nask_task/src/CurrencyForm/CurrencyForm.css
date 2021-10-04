@@ -31,17 +31,17 @@
   .Converter {
     height: 39vh;
   }
-} 
+}
 
 @media (min-width: 449px) and (max-width: 451px) {
   .Converter {
-     margin-left: -7vw;
+    margin-left: -7vw;
   }
 }
 
 @media (min-width: 279px) and (max-width: 281px) {
   .Converter {
-     margin-left: -4vw;
+    margin-left: -4vw;
   }
 }
 
@@ -59,8 +59,7 @@
   width: 100%;
 }
 
-.Form input,
-select {
+.Form input, select {
   padding: 5px;
   margin: 5px 10px;
   border-radius: 5px;
@@ -104,41 +103,41 @@ select {
   transform: rotate(90deg);
 }
 
-@media (min-width: 279px) and (max-width: 281px){
+@media (min-width: 279px) and (max-width: 281px) {
   .HistoryLabel {
     transform: translate(-15vw, -20vh);
   }
 }
 
-@media (max-width: 360px){
+@media (max-width: 360px) {
   .HistoryLabel {
     bottom: 55vh;
     left: 79vw;
   }
 }
 
-@media (min-width: 370px) and (max-width: 375px){
+@media (min-width: 370px) and (max-width: 375px) {
   .HistoryLabel {
     bottom: 55.5vh;
     left: 63vw;
   }
 }
 
-@media (min-width: 767px) and (max-width: 769px){
+@media (min-width: 767px) and (max-width: 769px) {
   .HistoryLabel {
     bottom: 38vh;
     left: 46vw;
   }
 }
 
-@media (min-width: 410px) and (max-width: 414px){
+@media (min-width: 410px) and (max-width: 414px) {
   .HistoryLabel {
     left: 59vw;
     bottom: 47vh;
   }
 }
 
-@media (min-width: 319px) and (max-width: 321px){
+@media (min-width: 319px) and (max-width: 321px) {
   .HistoryLabel {
     left: 79vw;
     bottom: 55.5vh;
@@ -159,7 +158,7 @@ select {
   }
 }
 
-@media (min-width: 1280px){
+@media (min-width: 1280px) {
   .HistoryLabel {
     bottom: 19.5vh;
     left: 36.8vw;
@@ -174,14 +173,15 @@ select {
 
 .Modal {
   background-color: white;
+  max-width: 500px;
   position: absolute;
   right: 1.5vw;
   top: 81vh;
+  width: 100%;
 }
 
-input[type="number"]
- {
-  width : 100%;
+input[type="number"] {
+  width: 100%;
   border: 1px solid #333;
   box-sizing: border-box;
 }
