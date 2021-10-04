@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Switch, Route, useHistory } from "react-router-dom";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Spinner } from 'reactstrap';
 
@@ -19,7 +19,7 @@ const App = () => {
     const handleSubmit = useCallback(async (termFromSearchBar) => {
         try {
             setLoading(true);
-            const response = await youtube.get('/search', {
+            const response: any = await youtube.get('/search', {
                 params: {
                     q: termFromSearchBar
                 }
@@ -46,7 +46,7 @@ const App = () => {
                     isOpen={erroModalOpen}
                 >
                     <ModalHeader className="modalHeader">
-                        <i className="fa fa-close closeIcon" onClick={() => setErrorrModalOpen(false)}/>
+                        <i className="fa fa-close closeIcon" onClick={() => setErrorrModalOpen(false)} />
                     </ModalHeader>
                     <ModalBody className="modalBody">{"Błąd zapytania"} </ModalBody>
                     <ModalFooter className="modalFooter">

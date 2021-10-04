@@ -1,5 +1,3 @@
-import React from 'react';
-
 import VideoList from '../VideoList/VideoList';
 import VideoDetail from '../VideoDetail/VideoDetail';
 

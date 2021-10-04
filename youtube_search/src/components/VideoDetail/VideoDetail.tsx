@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './VideoDetail.scss';
 
 type VideoDetailProps = {
