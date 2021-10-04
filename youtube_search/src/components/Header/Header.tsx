@@ -5,11 +5,11 @@ import SearchBar from '../SearchBar/Searchbar';
 import './Header.scss';
 
 type HeaderProps = {
-    handleFormSubmit: (termFromSearchBar: any) => void,
+    handleFormSubmit: (termFromSearchBar?: string) => void,
 }
 
 const useMedia = (query: string) => {
-    const [matches, setMatches] = useState(false);
+    const [matches, setMatches] = useState<boolean>(false);
     useEffect(() => {
         const media = window.matchMedia(query);
         if (media.matches !== matches) {
