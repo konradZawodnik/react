@@ -2,8 +2,8 @@ import { useState, useEffect, Fragment } from 'react';
 import { Button, Loader } from 'semantic-ui-react';
 import { connect } from 'react-redux'
 
-import ModalContainer from './ModalContainer/ModalContainer';
-import { getAllPhotos, getImageOfClickedBreed } from './store/actions/photosActions';
+import ModalContainer from '../ModalContainer/ModalContainer';
+import { getAllPhotos, getImageOfClickedBreed } from '../store/actions/photosActions';
 
 import './ButtonsContainer.css';
 
