@@ -1,0 +1,24 @@
+.squareBlock {
+    background-color: #ccc;
+    height: 100%;
+    max-height: 500px;
+    max-width: 2000px;
+    width: 100%;
+}
+
+.squareBlock:hover {
+    cursor: pointer;
+    filter: brightness(85%);
+}
+
+.squareBlockAfterFirstClick {
+    background-color: #00ff00;
+    height: 100%;
+    max-height: 500px;
+    max-width: 2000px;
+    width: 100%;
+}
+
+.squareBlockAfterFirstClick:hover {
+    cursor: pointer;
+}
