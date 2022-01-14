@@ -25,7 +25,7 @@ const SquareBlock = () => {
         <div
             className={clicked ? "squareBlockAfterFirstClick" : "squareBlock"}
             onClick={changeColor}
-            style={{ backgroundColor: count === 3 ? "#ff0000" : "" }}
+            style={{ backgroundColor: count === 3 && "#ff0000" }}
         />
     )
 
