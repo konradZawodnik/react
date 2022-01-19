@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 import './SquareBlock.css';
 
-const SquareBlock = () => {
+const SquareBlock: React.FC = () => {
     const [clicked, setClicked] = useState<boolean>(false);
     const [count, setCount] = useState<number>(0);
 
@@ -12,12 +12,12 @@ const SquareBlock = () => {
     }, [count]);
 
     useEffect(() => {
-        const timer = window.setInterval(() => {
+        const timer = setInterval(() => {
             setClicked(false);
             setCount(0);
         }, 2000);
         return () => {
-            window.clearInterval(timer);
+            clearInterval(timer);
         }
     }, []);
 
