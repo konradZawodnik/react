@@ -2,14 +2,14 @@ import { Fragment } from "react";
 
 import SquareBlock from "./SquareBlock/SquareBlock";
 
-import './Square.css';
+import './Square.scss';
 
-const App: React.FC = () => (
+const Square: React.FC = () => (
   <Fragment>
-    <header className="header"></header>
+    <header className="container"></header>
     <SquareBlock />
-    <footer className="footer"></footer>
+    <footer className="container"></footer>
   </Fragment>
 );
 
-export default App;
+export default Square;

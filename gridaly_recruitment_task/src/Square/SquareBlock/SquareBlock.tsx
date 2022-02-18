@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import './SquareBlock.css';
+import './SquareBlock.scss';
 
 const SquareBlock: React.FC = () => {
     const [clicked, setClicked] = useState<boolean>(false);
