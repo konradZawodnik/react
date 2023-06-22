@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .clearfix::after {
@@ -155,11 +154,11 @@ header button {
 
 @media (orientation: landscape) and (min-width: 501px) and (max-width: 767px) {
   header img {
-    bottom: -3%!important;
-    height: 50%!important;
-    left: 55%!important;
-    top: 17%!important;
-    width: 36%!important;
+    bottom: -3% !important;
+    height: 50% !important;
+    left: 55% !important;
+    top: 17% !important;
+    width: 36% !important;
   }
 }
 

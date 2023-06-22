@@ -1,6 +1,6 @@
 "use client"; // This is a client component
 import Image from "next/image";
-import headerPhoto from '../../images/photo1.jpg';
+import headerPhoto from "../../images/photo1.jpg";
 
 import "./HeaderSection.scss";
 

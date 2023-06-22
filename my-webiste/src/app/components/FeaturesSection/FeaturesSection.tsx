@@ -1,8 +1,8 @@
 "use client"; // This is a client component
 import Image from "next/image";
-import firstServicesPhoto from '../../images/services1.png';
-import secondServicesPhoto from '../../images/services2.png';
-import thirdServicesPhoto from '../../images/services3.png';
+import firstServicesPhoto from "../../images/services1.png";
+import secondServicesPhoto from "../../images/services2.png";
+import thirdServicesPhoto from "../../images/services3.png";
 
 import "./FeaturesSection.scss";
 
@@ -21,7 +21,7 @@ export const FeaturesSection = () => (
     </div>
     <div className="feature">
       <Image src={thirdServicesPhoto} alt="loga html js i css" />
-      <h2>Świetnie wyglądające na urzedziach mobilnych</h2>
+      <h2>Świetnie wyglądające na urządzeniach mobilnych</h2>
       <p className="description"></p>
     </div>
   </section>

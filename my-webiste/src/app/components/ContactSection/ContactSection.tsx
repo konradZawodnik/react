@@ -1,8 +1,8 @@
 "use client"; // This is a client component
 import Image from "next/image";
-import firstContactImage from '../../images/contact1.png';
-import secondContactImage from '../../images/contact2.png';
-import thirdContactImage from '../../images/contact3.png';
+import firstContactImage from "../../images/contact1.png";
+import secondContactImage from "../../images/contact2.png";
+import thirdContactImage from "../../images/contact3.png";
 
 import "./ContactSection.scss";
 
