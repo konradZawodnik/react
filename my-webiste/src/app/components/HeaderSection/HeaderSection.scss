@@ -78,6 +78,28 @@ header button {
   border: 2px solid white;
 }
 
+@media (orientation: portrait) and (min-width: 275px) and (max-width: 285px) {
+  header h1 {
+    font-size: 16px;
+  }
+  header h2 {
+    font-size: 16px;
+  }
+  header p {
+    margin-top: 45px;
+  }
+  header button {
+    line-height: 40px;
+    font-size: 15px;
+  }
+  header img {
+    right: -20%;
+    left: 9%;
+    top: 43%;
+    zoom: 0.5;
+  }
+}
+
 @media (orientation: portrait) and (min-width: 300px) {
   header #clock {
     font-size: 18px;
@@ -88,7 +110,6 @@ header button {
   header h2 {
     font-size: 22px;
   }
-
   header button {
     margin-top: 24px;
     line-height: 40px;
@@ -97,18 +118,16 @@ header button {
   header img {
     right: -20%;
     left: 17%;
-    zoom: 0.8;
   }
 }
 
-@media (orientation: portrait) and (min-width: 360px) {
+@media (orientation: portrait) and (min-width: 360px) and (max-width: 369px) {
   header h1 {
     font-size: 22px;
   }
   header h2 {
     font-size: 22px;
   }
-
   header button {
     margin-top: 24px;
     line-height: 40px;
@@ -116,9 +135,49 @@ header button {
   }
   header img {
     right: -20%;
-    left: 15%;
-    top: 51%;
-    zoom: 0.8;
+    left: 8%;
+    top: 37%;
+    zoom: .65;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 370px) and (max-width: 376px) {
+  header h1 {
+    font-size: 22px;
+  }
+  header h2 {
+    font-size: 22px;
+  }
+  header button {
+    margin-top: 24px;
+    line-height: 40px;
+    font-size: 16px;
+  }
+  header img {
+    right: -20%;
+    left: 18%;
+    top: 39%;
+    zoom: 0.5;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 377px) {
+  header h1 {
+    font-size: 22px;
+  }
+  header h2 {
+    font-size: 22px;
+  }
+  header button {
+    margin-top: 24px;
+    line-height: 40px;
+    font-size: 16px;
+  }
+  header img {
+    right: -20%;
+    left: 11%;
+    top: 37%;
+    zoom: .65;
   }
 }
 
@@ -129,36 +188,93 @@ header button {
   header h2 {
     font-size: 26px;
   }
-
   header button {
     margin-top: 40px;
     line-height: 50px;
     font-size: 20px;
   }
-
   header img {
     right: -20%;
     left: 25%;
     top: 51%;
-    zoom: 0.5;
   }
 }
 
+@media (orientation: portrait) and (min-width: 411px) and (max-width: 416px) {
+  header h1 {
+    font-size: 22px;
+  }
+  header h2 {
+    font-size: 22px;
+  }
+  header button {
+    margin-top: 24px;
+    line-height: 40px;
+    font-size: 16px;
+  }
+  header img {
+    right: -20%;
+    left: 7%;
+    top: 35%;
+    zoom: 0.75;
+  }
+}
+
+
 @media (orientation: portrait) and (min-width: 500px) {
+  header h1 {
+    font-size: 22px;
+  }
+  header h2 {
+    font-size: 22px;
+  }
+  header button {
+    margin-top: 24px;
+    line-height: 40px;
+    font-size: 16px;
+  }
   header img {
     bottom: -3%;
     left: 25%;
-    zoom: 0.5;
   }
 }
 
-@media (orientation: landscape) and (min-width: 501px) and (max-width: 767px) {
+@media (orientation: portrait) and (min-width: 501px) and (max-width: 540px) {
+  header h1 {
+    font-size: 22px;
+  }
+  header h2 {
+    font-size: 22px;
+  }
+  header button {
+    margin-top: 24px;
+    line-height: 40px;
+    font-size: 16px;
+  }
   header img {
-    bottom: -3% !important;
-    height: 50% !important;
-    left: 55% !important;
-    top: 17% !important;
-    width: 36% !important;
+    right: -20%;
+    left: 23%;
+    top: 43%;
+    zoom: 0.6;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 541px) and (max-width: 639px) {
+  header h1 {
+    font-size: 22px;
+  }
+  header h2 {
+    font-size: 22px;
+  }
+  header button {
+    margin-top: 24px;
+    line-height: 40px;
+    font-size: 16px;
+  }
+  header img {
+    right: -20%;
+    left: 0%;
+    top: 43%;
   }
 }
 
@@ -172,19 +288,87 @@ header button {
   header h2 {
     font-size: 32px;
   }
-
   header button {
     margin-top: 60px;
     line-height: 60px;
     font-size: 24px;
   }
-
   header img {
     right: -20%;
-    left: 25%;
+    left: 27%;
+    top: 40%;
     zoom: 0.75;
   }
 }
+
+@media (orientation: portrait) and (min-width: 819px) and (max-width: 821px) {
+  header p {
+    font-size: 60px;
+  }
+  header h1 {
+    font-size: 32px;
+  }
+  header h2 {
+    font-size: 32px;
+  }
+  header button {
+    margin-top: 60px;
+    line-height: 60px;
+    font-size: 24px;
+  }
+  header img {
+    right: -20%;
+    left: 21%;
+    top: 39%;
+    zoom: 1;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 910px) and (max-width: 913px) {
+  header p {
+    font-size: 60px;
+  }
+  header h1 {
+    font-size: 32px;
+  }
+  header h2 {
+    font-size: 32px;
+  }
+  header button {
+    margin-top: 60px;
+    line-height: 60px;
+    font-size: 24px;
+  }
+  header img {
+    right: -20%;
+    left: 25%;
+    top: 39%;
+    zoom: 1;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 914px) {
+  header p {
+    font-size: 60px;
+  }
+  header h1 {
+    font-size: 32px;
+  }
+  header h2 {
+    font-size: 32px;
+  }
+  header button {
+    margin-top: 60px;
+    line-height: 60px;
+    font-size: 24px;
+  }
+  header img {
+    right: -20%;
+    left: 24%;
+    top: 34%;
+  }
+}
+
 
 @media (orientation: landscape) {
   header img {
@@ -192,7 +376,6 @@ header button {
     bottom: 0;
     left: 53%;
     right: -5%;
-    zoom: 0.7;
   }
   header div.welcome {
     top: 15%;
@@ -241,7 +424,7 @@ header button {
   header img {
     right: -22%;
     top: 12%;
-    zoom: 0.8;
+    zoom: 0.75;
   }
 }
 
@@ -271,7 +454,7 @@ header button {
   header img {
     right: -18%;
     height: 80%;
-    zoom: 0.8;
+    zoom: 0;
   }
 }
 
@@ -296,7 +479,6 @@ header button {
   header img {
     right: -8%;
     height: 90%;
-    zoom: 0.8;
   }
 }
 
