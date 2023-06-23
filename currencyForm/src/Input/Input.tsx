@@ -1,9 +1,11 @@
+import { ReactNode } from 'react';
+
 import './Input.css';
 
 type InputProps = {
     amount: string,
     handleChange: (e: any) => void,
-    insertSuffix: (e: any) => void,
+    insertSuffix: (e: any) => ReactNode,
     product: string
 }
 

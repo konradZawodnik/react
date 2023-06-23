@@ -18,6 +18,8 @@ type ExchangeCounterProps = {
     },
 }
 
+type selectedValue = string;
+
 const ExchangeCounter = ({ currencies, prices }: ExchangeCounterProps) => {
     const [amount, setAmount] = useState<string>("");
     const [product, setProduct] = useState<string>("electricity")
@@ -31,7 +33,7 @@ const ExchangeCounter = ({ currencies, prices }: ExchangeCounterProps) => {
         setAmount("");
     }, []);
 
-    const insertSuffix = useCallback((select) => {
+    const insertSuffix = useCallback((select: selectedValue) => {
         switch (select) {
             case "electricity":
                 return <em>kWh</em>
@@ -44,7 +46,7 @@ const ExchangeCounter = ({ currencies, prices }: ExchangeCounterProps) => {
         }
     }, []);
 
-    const selectPrice = useCallback((select) => {
+    const selectPrice = useCallback((select: selectedValue) => {
         const price = prices[select]
         return price;
     }, [prices]);
