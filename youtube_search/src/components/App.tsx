@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { Switch, Route, useHistory } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Spinner } from 'reactstrap';
 
 import Header from './Header/Header';
@@ -9,14 +9,29 @@ import youtube from '../api/youtube';
 
 import './App.scss';
 
+export type SelectedVideo = { 
+    snippet: { description: string; title: string; }; 
+    id: { channelId: string; videoId: string; }; 
+} | null | undefined
+
+export type SelectedItem = { 
+    snippet: { description?: string; title?: string; }; 
+} | null | undefined;
+
+type SelectedVideos = Array<{ 
+    snippet: { description?: string | undefined; title?: string | undefined;
+    thumbnails: { medium: { url?: string | undefined; }; }; }; 
+    id: { channelId: string; videoId: string; }; 
+}>
+
 const App = () => {
-    const [videos, setVideos] = useState<Array<{ snippet: { description?: string | undefined; title?: string | undefined; thumbnails: { medium: { url?: string | undefined; }; }; }; id: { channelId: string; videoId: string; }; }>>([])
-    const [selectedVideo, setSelectedVideo] = useState<{ snippet: { description: string; title: string; }; id: { channelId: string; videoId: string; }; } | null | undefined>(null);
+    const [videos, setVideos] = useState<SelectedVideos>([])
+    const [selectedVideo, setSelectedVideo] = useState<SelectedVideo>(null);
     const [erroModalOpen, setErrorrModalOpen] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
-    const history = useHistory();
+    const navigate = useNavigate();
 
-    const handleSubmit = useCallback(async (termFromSearchBar) => {
+    const handleSubmit = useCallback(async (termFromSearchBar: string | undefined) => {
         try {
             setLoading(true);
             const response: any = await youtube.get('/search', {
@@ -26,16 +41,16 @@ const App = () => {
             });
             setVideos(response.data.items);
             setLoading(false);
-            history.push('/search');
+            navigate('/search');
         } catch (err) {
             setErrorrModalOpen(true);
         }
-    }, [history]);
+    }, [navigate]);
 
-    const handleVideoSelect = useCallback((video) => {
+    const handleVideoSelect = useCallback((video: SelectedVideo) => {
         setSelectedVideo(video);
-        history.push('/player');
-    }, [history]);
+        navigate('/player');
+    }, [navigate]);
 
     return (
         <>
@@ -63,25 +78,27 @@ const App = () => {
                 handleFormSubmit={handleSubmit}
             />
             <div className='container'>
-                <Switch>
+                <Routes>
                     <Route
+                        element={
+                            <PlayingView
+                              handleVideoSelect={handleVideoSelect}
+                              videos={videos}
+                              video={selectedVideo}
+                            /> 
+                        }
                         path="/player"
-                    >
-                        <PlayingView
-                            handleVideoSelect={handleVideoSelect}
-                            videos={videos}
-                            video={selectedVideo}
-                        />
-                    </Route>
+                    /> 
                     <Route
+                        element={
+                            <SearchView
+                              handleVideoSelect={handleVideoSelect}
+                              videos={videos}
+                            />
+                        }
                         path="/search"
-                    >
-                        <SearchView
-                            handleVideoSelect={handleVideoSelect}
-                            videos={videos}
-                        />
-                    </Route>
-                </Switch>
+                    />
+                </Routes>
             </div>
         </>
     )

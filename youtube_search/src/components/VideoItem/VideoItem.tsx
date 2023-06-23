@@ -1,7 +1,9 @@
+import { SelectedItem } from '../App';
+
 import './VideoItem.scss';
 
 type VideoItemProps = {
-    handleVideoSelect: (video: object) => void,
+    handleVideoSelect: (video: SelectedItem) => void,
     video: {
         snippet: {
             description?: string,

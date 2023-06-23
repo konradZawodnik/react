@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { SyntheticEvent, useCallback, useState } from 'react';
 
 import './SearchBar.scss';
 
@@ -13,7 +13,7 @@ const SearchBar = ({ handleFormSubmit }: SearchBarProps) => {
         setTerm(event.target.value);
     }, []);
 
-    const handleSubmit = useCallback(event => {
+    const handleSubmit = useCallback((event: SyntheticEvent) => {
         event.preventDefault();
         handleFormSubmit(term);
     }, [handleFormSubmit, term]);

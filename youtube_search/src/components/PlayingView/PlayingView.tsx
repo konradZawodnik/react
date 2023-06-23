@@ -1,10 +1,11 @@
+import { SelectedItem } from '../App';
 import VideoList from '../VideoList/VideoList';
 import VideoDetail from '../VideoDetail/VideoDetail';
 
 import './PlayingView.scss';
 
 type PlayingViewProps = {
-    handleVideoSelect: (video: object) => void,
+    handleVideoSelect: (video: SelectedItem | any) => void,
     video?: {
         snippet: {
             description: string,

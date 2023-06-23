@@ -1,9 +1,10 @@
+import { SelectedItem } from '../App';
 import VideoList from '../VideoList/VideoList';
 
 import './SearchView.scss';
 
 type SearchViewProps = {
-    handleVideoSelect: (video: object) => void,
+    handleVideoSelect: (video: SelectedItem | any) => void,
     videos: Array<{
         snippet: {
             description?: string,
