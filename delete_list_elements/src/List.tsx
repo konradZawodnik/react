@@ -1,5 +1,4 @@
-import React, { useState, useCallback } from 'react';
-
+import { useState, useCallback } from 'react';
 import Form from './Form/Form';
 
 import './List.css';
@@ -35,7 +34,7 @@ const List = () => {
     }
   };
 
-  const addItem = useCallback((e) => {
+  const addItem = useCallback((e: any) => {
     e.preventDefault();
     const newItem = {
       id: counter++,
