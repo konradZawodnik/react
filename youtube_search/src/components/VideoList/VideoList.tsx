@@ -1,4 +1,4 @@
-import { SelectedItem } from '../App';
+import { SelectedItem } from '../../types/types';
 import VideoItem from '../VideoItem/VideoItem';
 
 import './VideoList.scss';
@@ -26,11 +26,14 @@ const VideoList = ({ videos, handleVideoSelect }: VideoListProps) => {
     const renderedVideos = videos.map((video) => {
         const { id } = video;
         const { channelId, videoId } = id;
-        return <VideoItem 
-            key={channelId ? `https://www.youtube.com/embed/${channelId}`
-            : `https://www.youtube.com/embed/${videoId}`}
-            video={video}
-            handleVideoSelect={handleVideoSelect} />
+        return (
+            <VideoItem 
+              handleVideoSelect={handleVideoSelect} 
+              key={channelId ? `https://www.youtube.com/embed/${channelId}`
+              : `https://www.youtube.com/embed/${videoId}`}
+              video={video}
+            />
+        );
     });
 
     return <div className="renderedVideos">{renderedVideos}</div>;

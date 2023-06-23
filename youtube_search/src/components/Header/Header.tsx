@@ -30,7 +30,7 @@ const Header = ({ handleFormSubmit }: HeaderProps) => {
     return (
         <header className='header'>
             <div className="youtubeIcon">
-                <i className="fa fa-youtube-play red-color" aria-hidden="true" />
+                <div className="youtubeIconContainer"><i className="fa fa-youtube-play red-color" aria-hidden="true" /></div>
                 {large &&
                     <div className="logo">
                         <span className="you">YouTube</span>

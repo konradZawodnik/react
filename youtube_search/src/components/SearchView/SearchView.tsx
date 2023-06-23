@@ -1,10 +1,10 @@
-import { SelectedItem } from '../App';
+import { SelectedItem } from '../../types/types';
 import VideoList from '../VideoList/VideoList';
 
 import './SearchView.scss';
 
 type SearchViewProps = {
-    handleVideoSelect: (video: SelectedItem | any) => void,
+    handleVideoSelect: (video: SelectedItem) => void,
     videos: Array<{
         snippet: {
             description?: string,

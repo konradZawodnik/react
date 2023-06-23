@@ -16,7 +16,6 @@
 
 .red-color {
     color: red;
-    margin-top: 1.5vw;
 }
 
 .you {
@@ -39,4 +38,11 @@
         justify-content: center;
         margin-left: 0vw;
     }
+}
+
+.youtubeIconContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

@@ -1,4 +1,4 @@
-import { SelectedItem } from '../App';
+import { SelectedItem } from '../../types/types';
 
 import './VideoItem.scss';
 
