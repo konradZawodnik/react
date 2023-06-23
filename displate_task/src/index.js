@@ -1,18 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import { createRoot } from 'react-dom/client';
 import ButtonsContainer from './ButtonContainer/ButtonsContainer';
 import store from './store/store'
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
+import './index.css';
+
+const domNode = document.getElementById('root');
+const root = createRoot(domNode);
+root.render(
   <React.StrictMode>
     <Provider store={store}>
       <ButtonsContainer />
     </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
 
 // If you want your app to work offline and load faster, you can change
