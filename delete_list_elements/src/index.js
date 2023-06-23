@@ -1,7 +1,8 @@
 import { createRoot } from 'react-dom/client';
-import './index.css';
 import List from './List';
 import * as serviceWorker from './serviceWorker';
+
+import './index.css';
 
 const domNode = document.getElementById('root');
 const root = createRoot(domNode);
