@@ -25,19 +25,19 @@ const App = () => {
   const [predictions, setPredictions] = useState<any>(initialValues);
 
   const handleSubmit = useCallback(() => {
-    let randomItem = Math.floor(Math.random() * predictions.length);
+    let randomItem = Math.floor(Math.random() * predictions?.length);
     setPredictions(predictions[randomItem]);
   }, [predictions]);
 
   const handleAddClick = useCallback(() => {
-    for (let i = 0; i < predictions.length; i++) {
+    for (let i = 0; i < predictions?.length; i++) {
       const newArray = predictions.slice();
       newArray.push({ id: counter++, title: value });
-      if (newArray[newArray.length - 1].title === '') {
+      if (newArray[newArray?.length - 1]?.title === '') {
         return alert("Napisz jakąś wróżbę");
       } else {
         setPredictions(newArray);
-        alert(`Wróżba dodana. Aktulane wrózby to :${newArray[i].title}`)
+        alert(`Wróżba dodana. Aktulane wrózby to :${newArray[i]?.title}`)
       };
     };
   }, [predictions, value]);
@@ -64,7 +64,7 @@ const App = () => {
       >
         Dodaj wróżbę
         </button>
-      <h1>{predictions.title}</h1>
+      <h1>{predictions?.title}</h1>
       <br />
     </div>
   );
