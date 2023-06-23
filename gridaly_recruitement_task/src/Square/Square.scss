@@ -1,0 +1,8 @@
+$defaultPercentage: 100%;
+
+.container {
+    height: $defaultPercentage;
+    max-height: 100px;
+    max-width: 2000px;
+    width: $defaultPercentage;
+}
