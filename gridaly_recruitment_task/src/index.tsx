@@ -1,11 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
+import { createRoot } from 'react-dom/client';
 import Square from './Square/Square';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Square />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import './index.scss';
+
+const domNode = document.getElementById('root');
+const root = createRoot(domNode);
+root.render(<Square />);

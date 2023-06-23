@@ -8,7 +8,7 @@ import IsLovedComponent from './components/IsLovedComponent/IsLovedComponent';
 import Name from './components/Name/Name';
 import Select from './components/Select/Select';
 
-import styles from './page.module.css'
+import styles from './page.module.css';
 
 interface DataInterface {
     [key: string]: string|boolean,
