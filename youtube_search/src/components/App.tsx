@@ -54,7 +54,7 @@ const App = () => {
 
   return (
     <>
-      {loading && <Spinner />}
+      {loading && <Spinner className="spinner" />}
       {errorModalOpen && (
         <Modal className="modal" isOpen={errorModalOpen}>
           <ModalHeader className="modalHeader">
