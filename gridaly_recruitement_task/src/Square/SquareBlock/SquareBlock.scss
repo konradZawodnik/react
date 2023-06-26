@@ -8,32 +8,32 @@ $MaxWidth: 500px;
 $Width: 100%;
 
 .squareBlock {
-    align-items: $AlignItemsCenter;
-    background-color: #ccc;
-    height: $Height;
-    display: $DisplayFlex;
-    justify-content: $JustifyContentCenter;
-    max-height: $MaxHeight;
-    max-width: $MaxWidth;
-    width: $Width;
+  align-items: $AlignItemsCenter;
+  background-color: #ccc;
+  height: $Height;
+  display: $DisplayFlex;
+  justify-content: $JustifyContentCenter;
+  max-height: $MaxHeight;
+  max-width: $MaxWidth;
+  width: $Width;
 }
 
 .squareBlock:hover {
-    cursor: $CursorPointer;
-    filter: brightness(85%);
+  cursor: $CursorPointer;
+  filter: brightness(85%);
 }
 
 .squareBlockAfterFirstClick {
-    align-items: $AlignItemsCenter;
-    background-color: #00ff00;
-    height: $Height;
-    display: $DisplayFlex;
-    justify-content: $JustifyContentCenter;
-    max-height: $MaxHeight;
-    max-width: $MaxWidth;
-    width: $Width;
+  align-items: $AlignItemsCenter;
+  background-color: #00ff00;
+  height: $Height;
+  display: $DisplayFlex;
+  justify-content: $JustifyContentCenter;
+  max-height: $MaxHeight;
+  max-width: $MaxWidth;
+  width: $Width;
 }
 
 .squareBlockAfterFirstClick:hover {
-    cursor: $CursorPointer;
+  cursor: $CursorPointer;
 }

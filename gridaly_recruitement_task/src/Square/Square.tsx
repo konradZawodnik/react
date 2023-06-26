@@ -2,7 +2,7 @@ import { Fragment } from "react";
 
 import SquareBlock from "./SquareBlock/SquareBlock";
 
-import './Square.scss';
+import "./Square.scss";
 
 const Square: React.FC = () => (
   <Fragment>
