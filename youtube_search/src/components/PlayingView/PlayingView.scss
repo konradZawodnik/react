@@ -1,21 +1,20 @@
-
 $height: 100%;
 $maxHeight: 700px;
 $padding: 10px;
 $width: 100%;
 
 .firstColumn {
-    flex: 67%;
-    height: $height;
-    max-height: $maxHeight;
-    padding: $padding;
-    width: $width;
+  flex: 67%;
+  height: $height;
+  max-height: $maxHeight;
+  padding: $padding;
+  width: $width;
 }
 
 .secondColumn {
-    flex: 33%;
-    height: $height;
-    max-height: $maxHeight;
-    padding: $padding;
-    width: $width;
+  flex: 33%;
+  height: $height;
+  max-height: $maxHeight;
+  padding: $padding;
+  width: $width;
 }

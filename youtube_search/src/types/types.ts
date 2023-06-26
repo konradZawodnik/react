@@ -1,11 +1,11 @@
 export type SelectedVideos = Array<{
-    snippet: {
-      description?: string | undefined;
-      title?: string | undefined;
-      thumbnails: { medium: { url?: string | undefined } };
-    };
-    id: { channelId: string; videoId: string };
-  }>;
+  snippet: {
+    description?: string | undefined;
+    title?: string | undefined;
+    thumbnails: { medium: { url?: string | undefined } };
+  };
+  id: { channelId: string; videoId: string };
+}>;
 
 export type SelectedVideo =
   | {

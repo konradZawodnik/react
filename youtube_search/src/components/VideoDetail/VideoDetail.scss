@@ -5,44 +5,44 @@ $defaultJustifyContent: center;
 $defaultAlignItems: center;
 
 .videoDescription {
-    text-align: $defaultTextAlign;
+  text-align: $defaultTextAlign;
 }
 
 .videoDetails {
-    align-items: $defaultAlignItems;
-    display: $defaultDisplay;
-    flex-direction: $defaultFlexDirection;
-    justify-content: $defaultJustifyContent;
+  align-items: $defaultAlignItems;
+  display: $defaultDisplay;
+  flex-direction: $defaultFlexDirection;
+  justify-content: $defaultJustifyContent;
 }
 
 .videoPlayer {
-    align-items: $defaultTextAlign;
-    display: $defaultDisplay;
-    flex-direction: $defaultFlexDirection;
-    height: 100%;
-    justify-content: $defaultJustifyContent;
-    max-height: 500px;
-    max-width: 964px;
-    overflow: hidden;
-    position: relative;
-    width:100%;
+  align-items: $defaultTextAlign;
+  display: $defaultDisplay;
+  flex-direction: $defaultFlexDirection;
+  height: 100%;
+  justify-content: $defaultJustifyContent;
+  max-height: 500px;
+  max-width: 964px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .videoPlayer::after {
-    padding-top: 56.25%;
-    display: block;
-    content: '';
+  padding-top: 56.25%;
+  display: block;
+  content: "";
 }
 
 .videoPlayer iframe {
-    height: 100%;
-    left: 0;
-    max-height: 500px;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  height: 100%;
+  left: 0;
+  max-height: 500px;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .videoTitle {
-    text-align: $defaultTextAlign;
+  text-align: $defaultTextAlign;
 }
