@@ -4,7 +4,7 @@ import * as serviceWorker from "./serviceWorker";
 
 import "./index.css";
 
-const domNode = document.getElementById("root");
+const domNode = document.getElementById("root") as HTMLElement;
 const root = createRoot(domNode);
 root.render(<App />);
 
