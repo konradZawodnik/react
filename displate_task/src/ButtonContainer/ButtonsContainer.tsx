@@ -1,27 +1,35 @@
-import { useState, useEffect, Fragment } from 'react';
-import { Button, Loader } from 'semantic-ui-react';
-import { connect } from 'react-redux'
+import { useState, useEffect, Fragment } from "react";
+import { Button, Loader } from "semantic-ui-react";
+import { connect } from "react-redux";
 
-import ModalContainer from '../ModalContainer/ModalContainer';
-import { getAllPhotos, getImageOfClickedBreed } from '../store/actions/photosActions';
+import ModalContainer from "../ModalContainer/ModalContainer";
+import {
+  getAllPhotos,
+  getImageOfClickedBreed,
+} from "../store/actions/photosActions";
 
-import './ButtonsContainer.css';
+import "./ButtonsContainer.css";
 
 type TReduxState = {
-  loading: boolean
-  photos: any,
-  clickedPhoto: string,
-  randomPhoto: string
-}
+  loading: boolean;
+  photos: any;
+  clickedPhoto: string;
+  randomPhoto: string;
+};
 
 type TReduxActions = {
-  getAllPhotos: () => void,
-  getImageOfClickedBreed: (e: React.MouseEvent, key: string) => void,
-}
+  getAllPhotos: () => void;
+  getImageOfClickedBreed: (e: React.MouseEvent, key: string) => void;
+};
 
-type TButtonsContainer = TReduxActions & TReduxState
+type TButtonsContainer = TReduxActions & TReduxState;
 
-const ButtonsContainer = ({ getAllPhotos, getImageOfClickedBreed, loading, photos }: TButtonsContainer) => {
+const ButtonsContainer = ({
+  getAllPhotos,
+  getImageOfClickedBreed,
+  loading,
+  photos,
+}: TButtonsContainer) => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [active, setActive] = useState<boolean>(false);
 
@@ -29,14 +37,18 @@ const ButtonsContainer = ({ getAllPhotos, getImageOfClickedBreed, loading, photo
     getAllPhotos();
   }, [getAllPhotos]);
 
-  return loading ? <div className="Loading"><Loader animation="grow" size="small" /></div>
-    : (
-      <Fragment>
-        <span className="SiteTitle">Lista ras psów</span>
-        <div className="ButtonsContainer">
-          {photos && Object.keys(photos).map((key, index) => (
+  return loading ? (
+    <div className="Loading">
+      <Loader animation="grow" size="small" />
+    </div>
+  ) : (
+    <Fragment>
+      <span className="SiteTitle">Lista ras psów</span>
+      <div className="ButtonsContainer">
+        {photos &&
+          Object.keys(photos).map((key, index) => (
             <Fragment key={index}>
-              {photos[key].length <= 0 &&
+              {photos[key].length <= 0 && (
                 <ul>
                   <li key={index}>
                     <Button
@@ -51,7 +63,8 @@ const ButtonsContainer = ({ getAllPhotos, getImageOfClickedBreed, loading, photo
                       {`${key} ${photos[key]}`}
                     </Button>
                   </li>
-                </ul>}
+                </ul>
+              )}
               {photos[key].length > 0 && (
                 <ul>
                   <li key={index}>
@@ -71,24 +84,26 @@ const ButtonsContainer = ({ getAllPhotos, getImageOfClickedBreed, loading, photo
                       </div>
                     ))}
                   </li>
-                </ul>)}
+                </ul>
+              )}
             </Fragment>
           ))}
-          {active &&
-            <ModalContainer
-              modalOpen={modalOpen}
-              setModalOpen={setModalOpen}
-            />}
-        </div >
-      </Fragment>
-    );
+        {active && (
+          <ModalContainer modalOpen={modalOpen} setModalOpen={setModalOpen} />
+        )}
+      </div>
+    </Fragment>
+  );
 };
 
 const mapStateToProps = (state: TReduxState) => ({
   loading: state.photos.loading,
   photos: state.photos.photos,
   clickedPhoto: state.photos.clickedPhoto,
-  randomPhoto: state.photos.randomPhoto
+  randomPhoto: state.photos.randomPhoto,
 });
 
-export default connect(mapStateToProps, { getAllPhotos, getImageOfClickedBreed })(ButtonsContainer)
+export default connect(mapStateToProps, {
+  getAllPhotos,
+  getImageOfClickedBreed,
+})(ButtonsContainer);

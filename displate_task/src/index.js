@@ -1,13 +1,14 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import ButtonsContainer from './ButtonContainer/ButtonsContainer';
-import store from './store/store'
-import { Provider } from 'react-redux';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import { Provider } from "react-redux";
+import { createRoot } from "react-dom/client";
 
-import './index.css';
+import ButtonsContainer from "./ButtonContainer/ButtonsContainer";
+import store from "./store/store";
+import * as serviceWorker from "./serviceWorker";
 
-const domNode = document.getElementById('root');
+import "./index.css";
+
+const domNode = document.getElementById("root");
 const root = createRoot(domNode);
 root.render(
   <React.StrictMode>
