@@ -1,10 +1,10 @@
-import { createRoot } from 'react-dom/client';
-import List from './List';
-import * as serviceWorker from './serviceWorker';
+import { createRoot } from "react-dom/client";
+import List from "./List";
+import * as serviceWorker from "./serviceWorker";
 
-import './index.css';
+import "./index.css";
 
-const domNode = document.getElementById('root');
+const domNode = document.getElementById("root") as HTMLElement;
 const root = createRoot(domNode);
 root.render(<List />);
 // If you want your app to work offline and load faster, you can change
