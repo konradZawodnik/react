@@ -1,6 +1,6 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback } from "react";
 
-import './App.css';
+import "./App.css";
 
 interface PredictionsState {
   [index: number]: { id: number; title: string };
@@ -9,19 +9,21 @@ interface PredictionsState {
 let counter = 0;
 
 const App = () => {
-  const initialValues: PredictionsState = [{
-    id: counter++,
-    title: "Pierwsza wróżba"
-  },
-  {
-    id: counter++,
-    title: "Druga wróżba"
-  },
-  {
-    id: counter++,
-    title: "Trzecia wrózba"
-  }]
-  const [value, setValue] = useState<string>('');
+  const initialValues: PredictionsState = [
+    {
+      id: counter++,
+      title: "Pierwsza wróżba",
+    },
+    {
+      id: counter++,
+      title: "Druga wróżba",
+    },
+    {
+      id: counter++,
+      title: "Trzecia wrózba",
+    },
+  ];
+  const [value, setValue] = useState<string>("");
   const [predictions, setPredictions] = useState<any>(initialValues);
 
   const handleSubmit = useCallback(() => {
@@ -33,13 +35,13 @@ const App = () => {
     for (let i = 0; i < predictions?.length; i++) {
       const newArray = predictions.slice();
       newArray.push({ id: counter++, title: value });
-      if (newArray[newArray?.length - 1]?.title === '') {
+      if (newArray[newArray?.length - 1]?.title === "") {
         return alert("Napisz jakąś wróżbę");
       } else {
         setPredictions(newArray);
-        alert(`Wróżba dodana. Aktulane wrózby to :${newArray[i]?.title}`)
-      };
-    };
+        alert(`Wróżba dodana. Aktulane wrózby to :${newArray[i]?.title}`);
+      }
+    }
   }, [predictions, value]);
 
   return (
@@ -49,25 +51,17 @@ const App = () => {
         type="text"
         onChange={(e) => setValue(e.target.value)}
       />
-      <button
-        className="Button"
-        onClick={handleSubmit}
-        type="submit"
-      >
+      <button className="Button" onClick={handleSubmit} type="submit">
         Zobacz wróżbę
-       </button>
+      </button>
       <br />
-      <button
-        className="Button"
-        onClick={handleAddClick}
-        type="button"
-      >
+      <button className="Button" onClick={handleAddClick} type="button">
         Dodaj wróżbę
-        </button>
+      </button>
       <h1>{predictions?.title}</h1>
       <br />
     </div>
   );
-}
+};
 
 export default App;
