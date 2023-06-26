@@ -1,10 +1,10 @@
-import { createRoot } from 'react-dom/client';
-import ExchangeCounter from './App';
-import * as serviceWorker from './serviceWorker';
+import { createRoot } from "react-dom/client";
+import ExchangeCounter from "./App";
+import * as serviceWorker from "./serviceWorker";
 
-import './index.css';
+import "./index.css";
 
-const domNode = document.getElementById('root');
+const domNode = document.getElementById("root") as HTMLElement;
 const root = createRoot(domNode);
 root.render(<ExchangeCounter />);
 
