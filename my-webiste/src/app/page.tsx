@@ -45,7 +45,7 @@ export default function Home() {
     }
     document.getElementById(
       "clock"
-    )!.innerHTML = `Dzisiaj jest ${nameOfDay} ${day}.${month}.${year}, godzina ${hour}:${minute}:${second}.`;
+    )!.innerHTML = `Dzisiaj jest ${nameOfDay} ${day}.${month < 10  ? `0${month}` : month}.${year}, godzina ${hour}:${minute}:${second}.`;
     setTimeout(startTime, 500);
   };
   const zeroPad = (num: number, places: number) =>
