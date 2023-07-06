@@ -8,5 +8,5 @@ const root = createRoot(domNode);
 root.render(
   <BrowserRouter>
     <App />
-  </BrowserRouter>
+  </BrowserRouter>,
 );

@@ -13,7 +13,7 @@ const SearchBar = ({ handleFormSubmit }: SearchBarProps) => {
     (event: React.ChangeEvent<HTMLInputElement>) => {
       setTerm(event.target.value);
     },
-    []
+    [],
   );
 
   const handleSubmit = useCallback(
@@ -21,7 +21,7 @@ const SearchBar = ({ handleFormSubmit }: SearchBarProps) => {
       event.preventDefault();
       handleFormSubmit(term);
     },
-    [handleFormSubmit, term]
+    [handleFormSubmit, term],
   );
 
   return (

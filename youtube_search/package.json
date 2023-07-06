@@ -8,6 +8,7 @@
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.4.0",
     "node-sass": "^9.0.0",
+    "prettier": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.13.0",
@@ -31,8 +32,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "prettier": "^2.8.8"
-  }
+  ]
 }

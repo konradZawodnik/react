@@ -41,7 +41,7 @@ const App = () => {
         setErrorModalOpen(true);
       }
     },
-    [navigate]
+    [navigate],
   );
 
   const handleVideoSelect = useCallback(
@@ -49,7 +49,7 @@ const App = () => {
       setSelectedVideo(video);
       navigate("/player");
     },
-    [navigate]
+    [navigate],
   );
 
   return (
