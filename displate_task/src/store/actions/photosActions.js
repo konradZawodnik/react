@@ -27,7 +27,7 @@ export const getAllPhotos = () => async (dispatch) => {
 export const getImageOfClickedBreed = (e, value) => async (dispatch) => {
   try {
     const res = await axios.get(
-      `https://dog.ceo/api/breed/${value.trim()}/images/random`
+      `https://dog.ceo/api/breed/${value.trim()}/images/random`,
     );
     dispatch({
       type: GET_PHOTO_OF_CLICKED_BREED,
