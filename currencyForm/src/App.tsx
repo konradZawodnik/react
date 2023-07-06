@@ -51,7 +51,7 @@ const ExchangeCounter = ({ currencies, prices }: ExchangeCounterProps) => {
       const price = prices[select];
       return price;
     },
-    [prices]
+    [prices],
   );
 
   const price = selectPrice(product);
