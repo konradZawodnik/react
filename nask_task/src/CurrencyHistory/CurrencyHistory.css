@@ -1,222 +1,222 @@
 .AfterConvertion {
-    border-right: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .ClearHistory {
-    color: white;
-    cursor: pointer;
-    text-decoration: underline;
-    transform: translate(-14vw, 30vh);
-    white-space: nowrap;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+  transform: translate(-14vw, 30vh);
+  white-space: nowrap;
 }
 
 @media (max-width: 360px) {
-    .ClearHistory {
-        transform: translate(-49vw, 40vh);
-    }
+  .ClearHistory {
+    transform: translate(-49vw, 40vh);
+  }
 }
 
 @media (min-width: 370px) and (max-width: 375px) {
-    .ClearHistory {
-        transform: translate(-46vw, 39vh);
-    }
+  .ClearHistory {
+    transform: translate(-46vw, 39vh);
+  }
 }
 
 @media (min-width: 320px) and (max-width: 330px) {
-    .ClearHistory {
-        transform: translate(-56vw, 46vh);
-    }
+  .ClearHistory {
+    transform: translate(-56vw, 46vh);
+  }
 }
 
 @media (min-width: 767px) and (max-width: 769px) {
-    .ClearHistory {
-        transform: translate(-23vw, 28vh);
-    }
+  .ClearHistory {
+    transform: translate(-23vw, 28vh);
+  }
 }
 
 @media (min-width: 410px) and (max-width: 414px) {
-    .ClearHistory {
-        transform: translate(-42vw, 38vh);
-    }
+  .ClearHistory {
+    transform: translate(-42vw, 38vh);
+  }
 }
 
 @media (min-width: 1023px) and (max-width: 1025px) {
-    .ClearHistory {
-        transform: translate(-17vw, 21vh);
-    }
+  .ClearHistory {
+    transform: translate(-17vw, 21vh);
+  }
 }
 
 @media (min-width: 449px) and (max-width: 451px) {
-    .ClearHistory {
-        transform: translate(-39vw, 46vh);
-    }
+  .ClearHistory {
+    transform: translate(-39vw, 46vh);
+  }
 }
 
 .CloseIcon {
-    transform: translate(-8vw, -23vh);
-    font-weight: 400;
-    color: white;
+  transform: translate(-8vw, -23vh);
+  font-weight: 400;
+  color: white;
 }
 
 @media (max-width: 360px) {
-    .CloseIcon {
-        transform: translate(-31vw, -37vh);
-        font-weight: 400;
-        color: white;
-    }
+  .CloseIcon {
+    transform: translate(-31vw, -37vh);
+    font-weight: 400;
+    color: white;
+  }
 }
 
 @media (min-width: 370px) and (max-width: 375px) {
-    .CloseIcon {
-        transform: translate(-29vw, -37vh);
-    }
+  .CloseIcon {
+    transform: translate(-29vw, -37vh);
+  }
 }
 
 @media (min-width: 320px) and (max-width: 330px) {
-    .CloseIcon {
-        transform: translate(-35vw, -37vh);
-    }
+  .CloseIcon {
+    transform: translate(-35vw, -37vh);
+  }
 }
 
 @media (min-width: 767px) and (max-width: 769px) {
-    .CloseIcon {
-        transform: translate(-14vw, -23vh);
-    }
+  .CloseIcon {
+    transform: translate(-14vw, -23vh);
+  }
 }
 
 @media (min-width: 410px) and (max-width: 414px) {
-    .CloseIcon {
-        transform: translate(-26vw, -28vh);
-    }
+  .CloseIcon {
+    transform: translate(-26vw, -28vh);
+  }
 }
 
 @media (min-width: 1023px) and (max-width: 1025px) {
-    .CloseIcon {
-        transform: translate(-10vw, -18vh);
-    }
+  .CloseIcon {
+    transform: translate(-10vw, -18vh);
+  }
 }
 
 @media (min-width: 449px) and (max-width: 451px) {
-    .CloseIcon {
-        transform: translate(-24.5vw, -39vh);
-    }
+  .CloseIcon {
+    transform: translate(-24.5vw, -39vh);
+  }
 }
 
 @media (min-width: 449px) and (max-width: 451px) {
-    .CloseIcon {
-        transform: translate(-10vw, -18vh);
-    }
+  .CloseIcon {
+    transform: translate(-10vw, -18vh);
+  }
 }
 
 @media (min-width: 279px) and (max-width: 281px) {
-    .CloseIcon {
-        transform: translate(-86vw, -46vh);
-    }
+  .CloseIcon {
+    transform: translate(-86vw, -46vh);
+  }
 }
 
 .HistoryButton {
-    display: flex;
+  display: flex;
 }
 
 .GoToCurrencyHistory {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .HistoryArea {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
 }
 
 .HistoryData {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-top: 1px solid white;
-    border-right: 1px solid white;
-    height: 100%;
-    box-sizing: border-box;
-    background-color: white;
-    text-align: center;
-    color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  text-align: center;
+  color: white;
 }
 
 @media (max-width: 360px) {
-    .HistoryData {
-        margin-bottom: 6vh;
-    }
+  .HistoryData {
+    margin-bottom: 6vh;
+  }
 }
 
 @media (min-width: 370px) and (max-width: 375px) {
-    .HistoryData {
-        margin-bottom: 6vh;
-        margin-left: -14vw;
-    }
+  .HistoryData {
+    margin-bottom: 6vh;
+    margin-left: -14vw;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 330px) {
-    .HistoryData {
-        margin-left: -8vw;
-    }
+  .HistoryData {
+    margin-left: -8vw;
+  }
 }
 
 @media (min-width: 410px) and (max-width: 414px) {
-    .HistoryData {
-        margin-left: -13vw;
-    }
+  .HistoryData {
+    margin-left: -13vw;
+  }
 }
 
 @media (min-width: 449px) and (max-width: 451px) {
-    .HistoryData {
-        margin-left: -7vw;
-    }
+  .HistoryData {
+    margin-left: -7vw;
+  }
 }
 
 @media (min-width: 279px) and (max-width: 281px) {
-    .HistoryData {
-        margin-left: -4vw;
-    }
+  .HistoryData {
+    margin-left: -4vw;
+  }
 }
 
-.HistoryData>span {
-    background-color: blue;
-    padding: 8px 4px;
-    border-left: 1px solid white;
-    border-bottom: 1px solid white;
+.HistoryData > span {
+  background-color: blue;
+  padding: 8px 4px;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 .LackOfHistory {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-left: 6vh;
-    height: 100%;
-    width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 6vh;
+  height: 100%;
+  width: 100%;
 }
 
-@media (min-width: 1023px) and (max-width:1025px) {
-    .LackOfHistory {
-        margin-left: 2vh;
-    }
+@media (min-width: 1023px) and (max-width: 1025px) {
+  .LackOfHistory {
+    margin-left: 2vh;
+  }
 }
 
 .Loading {
-    color: white;
-    position: relative;
-    left: 9vw;
+  color: white;
+  position: relative;
+  left: 9vw;
 }
 
 .Modal {
-    background-color: white;
-    max-width: 500px;
-    position: absolute;
-    right: 1.5vw;
-    top: 81vh;
-    width: 100%;
+  background-color: white;
+  max-width: 500px;
+  position: absolute;
+  right: 1.5vw;
+  top: 81vh;
+  width: 100%;
 }
 
 .ConvertButton {
-    border: solid black 1px;
+  border: solid black 1px;
 }

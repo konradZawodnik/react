@@ -59,7 +59,8 @@
   width: 100%;
 }
 
-.Form input, select {
+.Form input,
+select {
   padding: 5px;
   margin: 5px 10px;
   border-radius: 5px;
