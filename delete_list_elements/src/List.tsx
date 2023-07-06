@@ -49,7 +49,7 @@ const List = () => {
       handleItems([...items, newItem]);
       setValue("");
     },
-    [items]
+    [items],
   );
 
   const listItem = items.map((item) => (

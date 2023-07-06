@@ -5,6 +5,7 @@
   "dependencies": {
     "@types/react": "^18.2.13",
     "@types/react-dom": "^18.2.6",
+    "prettier": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
@@ -26,8 +27,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "prettier": "^2.8.8"
-  }
+  ]
 }
