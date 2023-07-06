@@ -8,6 +8,8 @@
 
 .Button {
   cursor: pointer;
+  max-width: 70px;
+  width: 100%;
 }
 
 .Button:hover {
