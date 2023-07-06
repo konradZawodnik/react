@@ -3,7 +3,10 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 const saira = Saira({ subsets: ["latin"], weight: "500" });
-const sairaCondensed = Saira_Condensed({ subsets: ["latin", "latin-ext", "vietnamese"], weight: "500" });
+const sairaCondensed = Saira_Condensed({
+  subsets: ["latin", "latin-ext", "vietnamese"],
+  weight: "500",
+});
 
 export const metadata = {
   title: "My website",
@@ -17,7 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${saira.className} ${sairaCondensed.className}`}>{children}</body>
+      <body
+        className={`${inter.className} ${saira.className} ${sairaCondensed.className}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

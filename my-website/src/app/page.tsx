@@ -44,8 +44,10 @@ export default function Home() {
         break;
     }
     document.getElementById(
-      "clock"
-    )!.innerHTML = `Dzisiaj jest ${nameOfDay} ${day}.${month < 10  ? `0${month}` : month}.${year}, godzina ${hour}:${minute}:${second}.`;
+      "clock",
+    )!.innerHTML = `Dzisiaj jest ${nameOfDay} ${day}.${
+      month < 10 ? `0${month}` : month
+    }.${year}, godzina ${hour}:${minute}:${second}.`;
     setTimeout(startTime, 500);
   };
   const zeroPad = (num: number, places: number) =>
