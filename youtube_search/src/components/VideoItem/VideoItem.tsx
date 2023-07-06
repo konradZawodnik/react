@@ -21,7 +21,11 @@ const VideoItem = ({ video, handleVideoSelect }: VideoItemProps) => {
   const { snippet } = video;
   const { description, thumbnails, title } = snippet;
   return (
-    <div onClick={() => handleVideoSelect(video)} className="video-item item">
+    <div
+      onClick={() => handleVideoSelect(video)}
+      className="video-item item"
+      data-testid="youtubeSearchVideoItem"
+    >
       <img alt={description} className="image" src={thumbnails.medium.url} />
       <div className="content">
         <div className="title">{title}</div>

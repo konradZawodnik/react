@@ -16,9 +16,9 @@ import SearchView from "./SearchView/SearchView";
 import { SelectedItem, SelectedVideo, SelectedVideos } from "../types/types";
 import youtube from "../api/youtube";
 
-import "./App.scss";
+import "./YoutubeSearchContainer.scss";
 
-const App = () => {
+const YoutubeSearchContainer = () => {
   const [videos, setVideos] = useState<SelectedVideos>([]);
   const [selectedVideo, setSelectedVideo] = useState<SelectedVideo>(null);
   const [errorModalOpen, setErrorModalOpen] = useState<boolean>(false);
@@ -53,7 +53,7 @@ const App = () => {
   );
 
   return (
-    <>
+    <div data-testid="youtubeSearchContainer">
       {loading && <Spinner className="spinner" />}
       {errorModalOpen && (
         <Modal className="modal" isOpen={errorModalOpen}>
@@ -99,8 +99,8 @@ const App = () => {
           />
         </Routes>
       </div>
-    </>
+    </div>
   );
 };
 
-export default App;
+export default YoutubeSearchContainer;

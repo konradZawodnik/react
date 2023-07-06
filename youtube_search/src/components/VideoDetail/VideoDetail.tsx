@@ -25,7 +25,7 @@ const VideoDetail = ({ video }: VideoDetailProps) => {
   return (
     <>
       {video && (
-        <>
+        <div data-testid="youtubeSearchVideoDetail">
           <div className="videoPlayer">
             <iframe src={videoSrc} allowFullScreen title="Video player" />
           </div>
@@ -33,7 +33,7 @@ const VideoDetail = ({ video }: VideoDetailProps) => {
             <h4 className="videoTitle">{video.snippet.title}</h4>
             <p className="videoDescription">{video.snippet.description}</p>
           </div>
-        </>
+        </div>
       )}
     </>
   );

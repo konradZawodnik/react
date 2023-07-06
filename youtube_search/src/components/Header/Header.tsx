@@ -28,7 +28,7 @@ const useMedia = (query: string) => {
 const Header = ({ handleFormSubmit }: HeaderProps) => {
   const large = useMedia("(min-width: 768px)");
   return (
-    <header className="header">
+    <header className="header" data-testid="youtubeSearchHeader">
       <div className="youtubeIcon">
         <div className="youtubeIconContainer">
           <i className="fa fa-youtube-play red-color" aria-hidden="true" />

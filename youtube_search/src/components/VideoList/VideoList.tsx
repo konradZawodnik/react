@@ -39,6 +39,10 @@ const VideoList = ({ videos, handleVideoSelect }: VideoListProps) => {
     );
   });
 
-  return <div className="renderedVideos">{renderedVideos}</div>;
+  return (
+    <div className="renderedVideos" data-testid="youtubeSearchVideoList">
+      {renderedVideos}
+    </div>
+  );
 };
 export default VideoList;

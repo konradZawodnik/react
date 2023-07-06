@@ -23,7 +23,7 @@ type SearchViewProps = {
 };
 
 const SearchView = ({ handleVideoSelect, videos }: SearchViewProps) => (
-  <div className="searchViewContainer">
+  <div className="searchViewContainer" data-testid="youtubeSearchView">
     <VideoList handleVideoSelect={handleVideoSelect} videos={videos} />
   </div>
 );

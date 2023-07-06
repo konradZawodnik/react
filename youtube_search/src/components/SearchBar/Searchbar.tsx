@@ -25,7 +25,7 @@ const SearchBar = ({ handleFormSubmit }: SearchBarProps) => {
   );
 
   return (
-    <div className="searchBarContainer">
+    <div className="searchBarContainer" data-testid="youtubeSearchBar">
       <form className="form" onSubmit={handleSubmit}>
         <div className="inputField">
           <label className="label" htmlFor="video-search">
@@ -34,6 +34,7 @@ const SearchBar = ({ handleFormSubmit }: SearchBarProps) => {
           <div className="submitContainer">
             <input
               className="input"
+              data-testid="video-search-input"
               name="video-search"
               onChange={handleChange}
               placeholder="Search"

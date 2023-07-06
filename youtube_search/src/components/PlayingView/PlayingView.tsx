@@ -38,14 +38,14 @@ const PlayingView = ({
   videos,
   video,
 }: PlayingViewProps) => (
-  <>
+  <div data-testid="youtubeSearchPlayingView">
     <div className="firstColumn">
       <VideoDetail video={video} />
     </div>
     <div className="secondColumn">
       <VideoList handleVideoSelect={handleVideoSelect} videos={videos} />
     </div>
-  </>
+  </div>
 );
 
 export default PlayingView;
