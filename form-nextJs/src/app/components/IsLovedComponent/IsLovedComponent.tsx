@@ -8,7 +8,7 @@ type IsLovedComponentProps = {
 };
 
 const IsLovedComponent = ({ data, handleChange }: IsLovedComponentProps) => (
-  <label>
+  <label className="IsLovedComponentLabel">
     Czy lubisz to miasto?
     <input
       className="Input"

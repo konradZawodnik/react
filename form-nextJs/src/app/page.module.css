@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 10px;
 }
 
 .Button {
@@ -11,4 +12,13 @@
 
 .Button:hover {
   font-weight: bold;
+}
+
+.HeaderLabel {
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-style: italic;
+  justify-content: center;
+  padding-top: 25px;
 }

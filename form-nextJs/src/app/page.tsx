@@ -32,6 +32,7 @@ const Form = () => {
 
   return (
     <>
+      <label className={styles.HeaderLabel}>Prosty formularz w NextJs</label>
       <form className={styles.App}>
         <Name />
         <br />
