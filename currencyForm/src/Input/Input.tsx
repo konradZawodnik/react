@@ -10,7 +10,7 @@ type InputProps = {
 };
 
 const Input = ({ amount, handleChange, insertSuffix, product }: InputProps) => (
-  <label>
+  <label data-testid="currencyFormInput">
     <input
       className="Input"
       type="number"

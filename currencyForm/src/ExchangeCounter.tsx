@@ -4,7 +4,7 @@ import Cash from "./Cash/Cash";
 import Select from "./Select/Select";
 import Input from "./Input/Input";
 
-import "./App.css";
+import "./ExchangeCounter.css";
 
 type ExchangeCounterProps = {
   currencies: Array<{
@@ -56,7 +56,7 @@ const ExchangeCounter = ({ currencies, prices }: ExchangeCounterProps) => {
 
   const price = selectPrice(product);
   return (
-    <div className="App">
+    <div className="App" data-testid="currencyFormExchangeCounter">
       <Select product={product} handleSelect={handleSelect} />
       <br />
       <Input

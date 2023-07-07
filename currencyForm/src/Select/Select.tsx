@@ -6,7 +6,7 @@ type SelectProps = {
 };
 
 const Select = ({ handleSelect, product }: SelectProps) => (
-  <label>
+  <label data-testid="currencyFormSelect">
     Wybierz produkt:
     <select className="Select" value={product} onChange={handleSelect}>
       <option value="electricity">prąd</option>
