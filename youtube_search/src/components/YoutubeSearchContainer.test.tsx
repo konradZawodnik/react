@@ -18,12 +18,14 @@ describe("Youtube Search Container", () => {
     });
   });
 
-  it("should render YoutubeSearchContainer with selected testId", () => {
+  it("WHEN YoutubeSearchContainer is rendered THEN it should be rendered with selected testId", () => {
+    // WHEN
     render(
       <BrowserRouter>
         <YoutubeSearchContainer />
-      </BrowserRouter>
+      </BrowserRouter>,
     );
+    // THEN
     expect(screen.getByTestId("youtubeSearchContainer")).toBeInTheDocument();
   });
 });

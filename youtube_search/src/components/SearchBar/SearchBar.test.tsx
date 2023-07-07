@@ -1,18 +1,21 @@
-import '@testing-library/jest-dom'
+import "@testing-library/jest-dom";
 import { fireEvent, render, screen } from "@testing-library/react";
+
 import SearchBar from "./Searchbar";
 
 describe("Youtube Search SearchBar", () => {
-  it("should render searchBar of YoutubeSearch with selected testId", () => {
+  it("WHEN searchBar of YoutubeSearch is rendered THEN it should be rendered with selected testId", () => {
+    // WHEN
     render(<SearchBar handleFormSubmit={jest.fn()} />);
-    expect(screen.getByTestId('youtubeSearchBar')).toBeInTheDocument();
+    // THEN
+    expect(screen.getByTestId("youtubeSearchBar")).toBeInTheDocument();
   });
 
   it("WHEN submit button has been clicked THEN handleFormSubmit function should be called", () => {
     // WHEN
     const handleFormSubmit = jest.fn();
     render(<SearchBar handleFormSubmit={handleFormSubmit} />);
-    screen.getByRole('button').click();
+    screen.getByRole("button").click();
     // THEN
     expect(handleFormSubmit).toHaveBeenCalled();
   });
@@ -21,9 +24,9 @@ describe("Youtube Search SearchBar", () => {
     // WHEN
     const handleFormSubmit = jest.fn();
     render(<SearchBar handleFormSubmit={handleFormSubmit} />);
-    const input = screen.getByTestId('video-search-input');
-    fireEvent.change(input, { target: { value: 'test' } });
+    const input = screen.getByTestId("video-search-input");
+    fireEvent.change(input, { target: { value: "test" } });
     // THEN
-    expect(input).toHaveValue('test');
+    expect(input).toHaveValue("test");
   });
 });

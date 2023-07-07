@@ -1,9 +1,11 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+
 import VideoList from "./VideoList";
 
 describe("Youtube Search VideoList", () => {
-  it("should render videoList of YoutubeSearch with selected testId", () => {
+  it("WHEN videoList of YoutubeSearch is rendered THEN it should be rendered with selected testId", () => {
+    // WHEN
     render(
       <VideoList
         handleVideoSelect={jest.fn()}
@@ -24,8 +26,9 @@ describe("Youtube Search VideoList", () => {
             },
           },
         ]}
-      />
+      />,
     );
+    // THEN
     expect(screen.getByTestId("youtubeSearchVideoList")).toBeInTheDocument();
   });
 });

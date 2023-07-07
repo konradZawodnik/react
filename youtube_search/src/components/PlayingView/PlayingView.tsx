@@ -38,7 +38,7 @@ const PlayingView = ({
   videos,
   video,
 }: PlayingViewProps) => (
-  <div data-testid="youtubeSearchPlayingView">
+  <div data-testid="youtubeSearchPlayingView" className="playingViewContainer">
     <div className="firstColumn">
       <VideoDetail video={video} />
     </div>

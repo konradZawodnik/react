@@ -1,9 +1,10 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+
 import SearchView from "./SearchView";
 
 describe("Youtube Search SearchView", () => {
-  it("should render searchView of YoutubeSearch with selected testId", () => {
+  it("WHEN searchView of YoutubeSearch is rendered THEN it should be rendered with selected testId", () => {
     render(
       <SearchView
         handleVideoSelect={jest.fn()}
@@ -24,7 +25,7 @@ describe("Youtube Search SearchView", () => {
             },
           },
         ]}
-      />
+      />,
     );
     expect(screen.getByTestId("youtubeSearchView")).toBeInTheDocument();
   });

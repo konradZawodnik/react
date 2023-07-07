@@ -1,5 +1,6 @@
-import '@testing-library/jest-dom'
+import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+
 import Header from "./Header";
 
 describe("Youtube Search Header", () => {
@@ -16,8 +17,10 @@ describe("Youtube Search Header", () => {
     });
   });
 
-  it("should render header of YoutubeSearch with selected testId", () => {
+  it("WHEN header of YoutubeSearch is rendered THEN it should be rendered with selected testId", () => {
+    // WHEN
     render(<Header handleFormSubmit={jest.fn()} />);
-    expect(screen.getByTestId('youtubeSearchHeader')).toBeInTheDocument();
+    // THEN
+    expect(screen.getByTestId("youtubeSearchHeader")).toBeInTheDocument();
   });
 });

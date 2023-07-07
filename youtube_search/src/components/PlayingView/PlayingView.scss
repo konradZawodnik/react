@@ -11,6 +11,13 @@ $width: 100%;
   width: $width;
 }
 
+.playingViewContainer {
+  display: flex;
+  @media (max-width: 768px) {
+    display: contents;
+  }
+}
+
 .secondColumn {
   flex: 33%;
   height: $height;

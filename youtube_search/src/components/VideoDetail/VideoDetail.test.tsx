@@ -1,9 +1,11 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+
 import VideoDetail from "./VideoDetail";
 
 describe("Youtube Search VideoDetail", () => {
-  it("should render videoDetail of YoutubeSearch with selected testId", () => {
+  it("WHEN videoDetail of YoutubeSearch is rendered THEN it should be rendered with selected testId", () => {
+    // WHEN
     render(
       <VideoDetail
         video={{
@@ -16,8 +18,9 @@ describe("Youtube Search VideoDetail", () => {
             videoId: "123456789",
           },
         }}
-      />
+      />,
     );
+    // THEN
     expect(screen.getByTestId("youtubeSearchVideoDetail")).toBeInTheDocument();
   });
 
@@ -36,15 +39,15 @@ describe("Youtube Search VideoDetail", () => {
             videoId: videoId,
           },
         }}
-      />
+      />,
     );
     expect(screen.getByTitle("Video player")).not.toHaveAttribute(
       "src",
-      `https://www.youtube.com/embed/${channelId}`
+      `https://www.youtube.com/embed/${channelId}`,
     );
     expect(screen.getByTitle("Video player")).toHaveAttribute(
       "src",
-      `https://www.youtube.com/embed/${videoId}`
+      `https://www.youtube.com/embed/${videoId}`,
     );
   });
 });

@@ -1,9 +1,11 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+
 import PlayingView from "./PlayingView";
 
 describe("Youtube Search PlayingView", () => {
-  it("should render playingView of YoutubeSearch with selected testId", () => {
+  it("WHEN playingView of YoutubeSearch is rendered THEN it should be rendered with selected testId", () => {
+    // WHEN
     render(
       <PlayingView
         handleVideoSelect={jest.fn()}
@@ -25,8 +27,9 @@ describe("Youtube Search PlayingView", () => {
           },
         ]}
         video={null}
-      />
+      />,
     );
+    // THEN
     expect(screen.getByTestId("youtubeSearchPlayingView")).toBeInTheDocument();
   });
 });

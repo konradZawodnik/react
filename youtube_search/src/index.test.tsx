@@ -12,8 +12,8 @@ describe("Application root", () => {
       JSON.stringify(
         Object.assign({}, YoutubeSearchContainer, {
           _reactInternalInstance: "censored",
-        })
-      )
+        }),
+      ),
     ).toMatchSnapshot();
   });
 });

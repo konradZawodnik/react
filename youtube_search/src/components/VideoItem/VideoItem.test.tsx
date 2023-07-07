@@ -1,9 +1,10 @@
 import "@testing-library/jest-dom";
 import { fireEvent, render, screen } from "@testing-library/react";
+
 import VideoItem from "./VideoItem";
 
 describe("Youtube Search VideoItem", () => {
-  it("should render videoItem of YoutubeSearch with selected testId", () => {
+  it("WHEN videoItem of YoutubeSearch is rendered THEN it should be rendered with selected testId", () => {
     render(
       <VideoItem
         handleVideoSelect={jest.fn()}
@@ -18,7 +19,7 @@ describe("Youtube Search VideoItem", () => {
             },
           },
         }}
-      />
+      />,
     );
     expect(screen.getByTestId("youtubeSearchVideoItem")).toBeInTheDocument();
   });
@@ -39,7 +40,7 @@ describe("Youtube Search VideoItem", () => {
             },
           },
         }}
-      />
+      />,
     );
     const videoItemContainer = screen.getByTestId("youtubeSearchVideoItem");
     fireEvent.click(videoItemContainer);
