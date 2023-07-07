@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import App from "./App";
-import AdminPanel from "./AdminPanel";
+import App from "./App/App";
+import AdminPanel from "./AdminPanel/AdminPanel";
 import PageNotFound from "./PageNotFound";
 
 export default class Router extends React.Component {

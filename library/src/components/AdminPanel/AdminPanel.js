@@ -1,5 +1,5 @@
 import React from "react";
-import { fbase, firebaseApp } from "../fbase";
+import { fbase, firebaseApp } from "../../fbase";
 
 class AdminPanel extends React.Component {
   state = {

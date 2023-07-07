@@ -1,7 +1,7 @@
 import React from "react";
-import Order from "./Order";
-import Header from "./Header";
-import Inventory from "./Inventory";
+import Order from "../Order/Order";
+import Header from "../Header/Header";
+import Inventory from "../Inventory/Inventory";
 
 import "../index.css";
 

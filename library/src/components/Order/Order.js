@@ -1,5 +1,5 @@
 import React from "react";
-import OrderView from "./OrderView";
+import OrderView from "../OrderView/OrderView";
 
 const order = () => {
   const { order, removeFromOrder } = this.props;

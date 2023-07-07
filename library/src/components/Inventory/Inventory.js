@@ -1,6 +1,6 @@
 import React from "react";
-import BookView from "./BookView";
-import { fbase } from "../fbase";
+// import BookView from "../BookView";
+import { fbase } from "../../fbase";
 
 class Inventory extends React.Component {
   state = {
