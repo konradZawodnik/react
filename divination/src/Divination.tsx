@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 
-import "./App.css";
+import "./Divination.css";
 
 interface PredictionsState {
   [index: number]: { id: number; title: string };
@@ -8,7 +8,7 @@ interface PredictionsState {
 
 let counter = 0;
 
-const App = () => {
+const Divination = () => {
   const initialValues: PredictionsState = [
     {
       id: counter++,
@@ -45,17 +45,28 @@ const App = () => {
   }, [predictions, value]);
 
   return (
-    <div className="Container">
+    <div className="Container" data-testid="divinationContainer">
       <input
         className="Input"
+        placeholder="Wpisz nową wróżbę"
         type="text"
         onChange={(e) => setValue(e.target.value)}
       />
-      <button className="Button" onClick={handleSubmit} type="submit">
+      <button
+        aria-label="Zobacz wróżbę"
+        className="Button"
+        onClick={handleSubmit}
+        type="submit"
+      >
         Zobacz wróżbę
       </button>
       <br />
-      <button className="Button" onClick={handleAddClick} type="button">
+      <button
+        aria-label="Dodaj wróżbę"
+        className="Button"
+        onClick={handleAddClick}
+        type="button"
+      >
         Dodaj wróżbę
       </button>
       <h1>{predictions?.title}</h1>
@@ -64,4 +75,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Divination;
