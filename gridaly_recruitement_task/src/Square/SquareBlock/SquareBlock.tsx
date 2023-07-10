@@ -24,6 +24,7 @@ const SquareBlock: React.FC = () => {
   return (
     <div
       className={clicked ? "squareBlockAfterFirstClick" : "squareBlock"}
+      data-testid="squareBlockContainer"
       onClick={changeColor}
       style={{ backgroundColor: count === 3 && "#ff0000" }}
     />

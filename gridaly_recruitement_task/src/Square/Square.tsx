@@ -6,7 +6,7 @@ import "./Square.scss";
 
 const Square: React.FC = () => (
   <Fragment>
-    <header className="container"></header>
+    <header className="container" data-testid="squareContainer"></header>
     <SquareBlock />
     <footer className="container"></footer>
   </Fragment>
