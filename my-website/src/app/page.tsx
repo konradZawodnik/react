@@ -1,5 +1,5 @@
 "use client"; // This is a client component
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { HeaderSection } from "./components/HeaderSection/HeaderSection";
 import { FeaturesSection } from "./components/FeaturesSection/FeaturesSection";
 import { SloganSection } from "./components/SloganSection/SloganSection";
@@ -8,6 +8,7 @@ import { ContactSection } from "./components/ContactSection/ContactSection";
 import { FooterSection } from "./components/FooterSection/FooterSection";
 
 export default function Home() {
+  const [clock, setClock] = useState<string>("");
   const startTime = () => {
     let today = new Date();
     today.toISOString();
@@ -43,11 +44,48 @@ export default function Home() {
         nameOfDay = "Sobota";
         break;
     }
-    document.getElementById(
-      "clock",
-    )!.innerHTML = `Dzisiaj jest ${nameOfDay} ${day}.${
-      month < 10 ? `0${month}` : month
-    }.${year}, godzina ${hour}:${minute}:${second}.`;
+    let nameOfMonth;
+    switch (month) {
+      case 1:
+        nameOfMonth = "Stycznia";
+        break;
+      case 2:
+        nameOfMonth = "Lutego";
+        break;
+      case 3:
+        nameOfMonth = "Marca";
+        break;
+      case 4:
+        nameOfMonth = "Kwietnia";
+        break;
+      case 5:
+        nameOfMonth = "Maja";
+        break;
+      case 6:
+        nameOfMonth = "Czerwca";
+        break;
+      case 7:
+        nameOfMonth = "Lipca";
+        break;
+      case 8:
+        nameOfMonth = "Sierpnia";
+        break;
+      case 9:
+        nameOfMonth = "Września";
+        break;
+      case 10:
+        nameOfMonth = "Października";
+        break;
+      case 11:
+        nameOfMonth = "Listopada";
+        break;
+      case 12:
+        nameOfMonth = "Grudnia";
+        break;
+    }
+    setClock(
+      `Dzisiaj jest ${nameOfDay} ${day} ${nameOfMonth} ${year}. Godzina: ${hour}:${minute}:${second}`,
+    );
     setTimeout(startTime, 500);
   };
   const zeroPad = (num: number, places: number) =>
@@ -63,7 +101,7 @@ export default function Home() {
 
   return (
     <>
-      <HeaderSection />
+      <HeaderSection clock={clock} />
       <FeaturesSection />
       <SloganSection />
       <HobbySection />

@@ -4,10 +4,14 @@ import headerPhoto from "../../images/photo1.jpg";
 
 import "./HeaderSection.scss";
 
-export const HeaderSection = () => {
+type HeaderSectionProps = {
+  clock?: string;
+};
+
+export const HeaderSection = ({ clock }: HeaderSectionProps) => {
   return (
     <header>
-      <div id="clock"> </div>
+      <div className="clock">{clock}</div>
       <div className="welcome">
         <p>Witam!</p>
         <h1>Jestem Konrad Zawodnik</h1>
