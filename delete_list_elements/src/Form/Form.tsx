@@ -1,20 +1,20 @@
-import React from "react";
+import { SyntheticEvent } from "react";
 
 type FormProps = {
-  addItem: (e: any) => void;
-  setValue: (e: any) => void;
+  addItem: (e: SyntheticEvent) => void;
+  setValue: (e: string) => void;
   value?: string;
 };
 
-const Form = ({ addItem, setValue, value }: FormProps) => (
-  <form onSubmit={addItem}>
+const Form = ({ addItem, setValue, value }: FormProps): JSX.Element => (
+  <form onSubmit={addItem} data-testid="deleteListElementsForm">
     <input
       onChange={(e) => setValue(e.target.value)}
       placeholder="Dodaj członka"
       type="text"
       value={value}
     ></input>
-    <button className="Button" type="submit">
+    <button aria-label="Dodaj" className="Button" type="submit">
       Dodaj
     </button>
   </form>

@@ -1,15 +1,16 @@
 import { useState, useCallback } from "react";
 import Form from "./Form/Form";
+import ListItem from "./ListItem/ListItem";
 
 import "./List.css";
 
-type ItemInterface = {
+export type ItemInterface = {
   id: number;
   name: string;
 };
 
 let counter = 0;
-const List = () => {
+const List = (): JSX.Element => {
   const [items, handleItems] = useState([
     {
       id: counter++,
@@ -52,19 +53,11 @@ const List = () => {
     [items],
   );
 
-  const listItem = items.map((item) => (
-    <li>
-      <div key={item.id}>
-        <span>{item.name}</span>{" "}
-        <button className="Button" onClick={(e) => handleDelete(e, item)}>
-          Usuń członka
-        </button>
-      </div>
-    </li>
-  ));
   return (
-    <div className="Container">
-      <ul>{listItem}</ul>
+    <div className="Container" data-testid="deleteListElementsListContainer">
+      <ul>
+        <ListItem handleDelete={handleDelete} items={items} />
+      </ul>
       <Form addItem={addItem} setValue={setValue} value={value} />
     </div>
   );
