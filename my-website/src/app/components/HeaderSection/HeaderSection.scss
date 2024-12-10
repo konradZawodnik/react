@@ -19,7 +19,7 @@ header {
   margin: 0 auto;
 }
 
-header #clock {
+header .clock {
   z-index: 1;
   top: 0.75%;
   left: 5%;
@@ -101,7 +101,7 @@ header button {
 }
 
 @media (orientation: portrait) and (min-width: 300px) {
-  header #clock {
+  header .clock {
     font-size: 18px;
   }
   header h1 {
